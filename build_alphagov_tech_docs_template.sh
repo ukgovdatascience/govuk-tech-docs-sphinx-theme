@@ -3,7 +3,7 @@
 # If `jq` is installed, get the latest commit hash from the `alphagov/tech-docs-template` repository using GitHub API
 if hash jq 2>/dev/null ; then
   LATEST_COMMIT=$(curl https://api.github.com/repos/alphagov/tech-docs-template/commits/master -s | jq .sha -r)
-  if [ ! $? -eq 0 ]; then
+  if [ $? -ne 0 ]; then
     echo 'Could not get latest commit hash from `alphagov/tech-docs-template` GitHub repository!'
     exit 1
   fi
@@ -34,4 +34,23 @@ if hash middleman 2>/dev/null ; then
 else
   echo 'Middleman is not installed! See https://github.com/alphagov/tech-docs-template'
   exit 127
+fi
+
+if [ $? -eq 0 ]; then
+
+  # Iterate over all .css and .html files, which need to have referenced file paths amended
+  for file in $(find ${DIR_SOURCE_ALPHAGOV_TECH_DOCS_TEMPLATE} -type f | grep '\(\.css\|\.html\)$')
+  do
+
+    # Find and replace referenced file paths to relative paths, depending on the file type
+    if [[ ${file} == *.html ]]; then
+      sed -i '' 's|src="/assets/|src="./assets/|g' ${file}
+      sed -i '' 's|src="/javascripts/|src="./javascripts/|g' ${file}
+      sed -i '' 's|href="/stylesheets/|href="./stylesheets/|g' ${file}
+    elif [[ ${file} == *.css ]]; then
+      sed -i '' 's|url("/assets/|url("../assets/|g' ${file}
+      sed -i '' 's|url("/images/|url("../images/|g' ${file}
+    fi
+
+  done
 fi
