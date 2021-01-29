@@ -860,11 +860,11 @@ MigrationBackup/
 source/*
 !source/README.md
 
-# Ignore the contents of the `source` sub-folders, except for their `.gitkeep` files; adapted from
+# Ignore the contents of the `source` sub-folders, except for the `.template_version` file; adapted from
 # https://stackoverflow.com/a/20652768
 !source/**/
 source/alphagov-tech-docs-template/*
-!source/alphagov-tech-docs-template/.gitkeep
+!source/alphagov-tech-docs-template/.template_version
 
 # Ignore the `.secrets` file
 .secrets
