@@ -99,44 +99,9 @@
         </div>
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <p>
-            <h1 id="hello-world">Hello, World!</h1>
-            <h2 id="edit-me">Edit Me!</h2>
-            <p>Open <code>source/documentation/index.md</code> in your favourite text editor and start editing!</p>
-            <p>You can write content in <a href="https://daringfireball.net/projects/markdown/">Markdown</a> using <strong>all</strong> of the <em>usual</em> syntax that you&rsquo;re used to!</p>
-            <p>This means you can use things like tables:</p>
-            <div class="table-container">
-              <table>
-                <tr>
-                  <th>Food</th>
-                  <th>Kind</th>
-                  <th>Tasty?</th>
-                </tr>
-                <tr>
-                  <td>Bananas</td>
-                  <td>Fruit</td>
-                  <td>Yes</td>
-                </tr>
-                <tr>
-                  <td>Aubergines</td>
-                  <td>Vegetable </td>
-                  <td>No</td>
-                </tr>
-                <tr>
-                  <td>Apricots</td>
-                  <td>Fruit</td>
-                  <td>Yes</td>
-                </tr>
-              </table>
-            </div>
-            </p>
-            <div class="highlight">
-              <pre class="highlight plaintext"><code>
-                  To change the title of the page or include additional files you'll need to edit &lt;code&gt;source/index.html.md.erb&lt;/code&gt;.;
-              </code></pre>
-            </div>
-            <p>If you want slightly more control, you can always use <strong>HTML</strong>.</p>
-            <p>For more detail and troubleshooting, take a look at the <code>README.md</code> file in the root of this project.</p>
+
+            {% block body %} {% endblock %}
+
           </main>
           <aside>
             <ul class="contribution-banner">
