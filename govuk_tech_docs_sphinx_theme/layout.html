@@ -83,18 +83,9 @@
         <div class="app-pane__toc">
           <div class="toc" data-module="table-of-contents">
             <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
-            <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
-              <ul>
-                <li>
-                  <a href="#hello-world"><span>Hello, World!</span></a>
-                  <ul>
-                    <li>
-                      <a href="#edit-me"><span>Edit Me!</span></a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
+
+            {% include "sidebar.html" %}
+
           </div>
         </div>
         <div class="app-pane__content toc-open-disabled">
