@@ -6,6 +6,7 @@ This page provides information on the repository's structure. The repository's f
 :maxdepth: 2
 ./docs.md
 ./govuk_tech_docs_sphinx_theme.md
+./source.md
 ./tests.md
 ```
 

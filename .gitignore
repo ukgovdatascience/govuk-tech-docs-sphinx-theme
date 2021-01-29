@@ -856,5 +856,15 @@ MigrationBackup/
 
 ### GOV.UK Tech Docs Sphinx Theme ###
 
+# Ignore the contents of the `source` folder, except for the `README.md` file
+source/*
+!source/README.md
+
+# Ignore the contents of the `source` sub-folders, except for their `.gitkeep` files; adapted from
+# https://stackoverflow.com/a/20652768
+!source/**/
+source/alphagov-tech-docs-template/*
+!source/alphagov-tech-docs-template/.gitkeep
+
 # Ignore the `.secrets` file
 .secrets
