@@ -1,6 +1,6 @@
 # GOV.UK Tech Docs Sphinx Theme
 
-Brief overview of your project.
+A Sphinx theme to replicate the GOV.UK Tech Docs Template.
 
 > ℹ️ Where this documentation refers to the **root folder** we mean where this README.md is located.
 
