@@ -8,6 +8,11 @@
     <link href="{{ pathto('_static/stylesheets/manifest.css', 1) }}" rel="stylesheet" />
     <link href="{{ pathto('_static/stylesheets/custom.css', 1) }}" rel="stylesheet" />
     <link rel="canonical" href="source/">
+    {%- if favicon %}
+    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+    {% else %}
+    <link rel="shortcut icon" href="{{ pathto('_static/', 1) }}/favicon.ico"/>
+    {% endif -%}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="source/images/govuk-large.png" />
     <meta name="twitter:title" content="GOV.UK Documentation Example - My First Service" />
