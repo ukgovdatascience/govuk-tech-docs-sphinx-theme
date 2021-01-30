@@ -4,12 +4,6 @@ A Sphinx theme to replicate the GOV.UK Tech Docs Template.
 
 > ℹ️ Where this documentation refers to the **root folder** we mean where this README.md is located.
 
-- [Getting started](#getting-started)
-  - [Requirements](#requirements)
-- [Licence](#licence)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-
 ## Getting started
 
 To be added.
