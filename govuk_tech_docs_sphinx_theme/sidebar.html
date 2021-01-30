@@ -1,57 +1,43 @@
 <div class="app-pane__toc">
   <div class="toc" data-module="table-of-contents">
     <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
-  <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+    <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
 
-    {%- set nav = get_nav_object(maxdepth=3, collapse=True) -%}
-
-    <ul>
-
-      {%- for main_nav_item in nav -%}
-
-      <li>
-        <a href="{{ main_nav_item.url }}"><span>{{ main_nav_item.title }}</span></a>
-      </li>
-
-        {%- if main_nav_item.children -%}
-        {%- for nav_item in main_nav_item.children -%}
-        {%- if nav_item.children -%}
-
-        <ul>
-          <li>
-            <a href="{{ nav_item.url }}"><span>{{ nav_item.title }}</span>></a>
-            <ul>
-              {%- for nav_item in nav_item.children -%}
-              <li>
-                <a href="{{ nav_item.url }}"><span>{{ nav_item.title }}</span></a>
-              </li>
-              {%- endfor -%}
-            </ul>
-          </li>
-        </ul>
-
-        {%- else -%}
-
-        <ul>
-          <li>
-            <a href="{{ nav_item.url }}"><span>{{ nav_item.title }}</span></a>
-          </li>
-        </ul>
-
-        {%- endif -%}
+      {# Global table of contents #}
+      <ul>
+        {%- set nav = get_nav_object(maxdepth=6, collapse=True) -%}
+        {%- for main_nav_item in nav recursive -%}
+        <li>
+          <a href="{{ main_nav_item.url }}"><span>{{ main_nav_item.title }}</span></a>
+          {%- if main_nav_item.children -%}
+          <ul>{{ loop(main_nav_item.children) }}</ul>
+          {%- endif -%}
+        </li>
         {%- endfor -%}
+      </ul>
+      <hr size="1">
 
+      {# Local table of contents #}
+      {%- set nav_local = get_page_toc_object() -%}
+      {%- if nav_local -%}
+      <h2>On this page</h2>
+
+      <ul>
+        <li>
+          <a href="{{ name }}"><span>{{ title }}</span></a>
+          {%- for main_nav_local_item in nav_local recursive -%}
+          <ul>
+            <li>
+              <a href="{{ main_nav_local_item.url }}"><span>{{ main_nav_local_item.title }}</span></a>
+              {%- if main_nav_local_item.children -%}
+              <ul>{{ loop(main_nav_local_item.children) }}</ul>
+              {%- endif -%}
+            </li>
+          </ul>
+          {%- endfor -%}
+        </li>
+      </ul>
       {%- endif -%}
-      {%- endfor -%}
-
-    </ul>
-  </nav>
-
-  <hr size="1">
-  <nav id="local-toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
-    <h2>On this page</h2>
-    {{ toc }}
-  </nav>
-
+    </nav>
   </div>
 </div>
