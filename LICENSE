@@ -33,9 +33,7 @@ This project incorporates components from the projects listed below:
 4.  `Modernizr/Modernizr` version 3.6.0 (https://github.com/Modernizr/Modernizr)
 5.  `filamentgroup/fixed-sticky` v0.1.7 (https://github.com/filamentgroup/fixed-sticky)
 6.  `lodash/lodash` v4.7.15 (https://github.com/lodash/lodash)
-7.  `olivernn/lunr.js` v2.3.9 (https://github.com/olivernn/lunr.js)
-8.  `julmot/mark.js` version 8.11.1 (https://github.com/julmot/mark.js)
-9.  `alphagov/govuk-frontend` v3.10.2 (https://github.com/alphagov/govuk-frontend)
+7.  `alphagov/govuk-frontend` v3.10.2 (https://github.com/alphagov/govuk-frontend)
 
 %% `alphagov/tech-docs-template` NOTICES AND INFORMATION BEGIN HERE
 ===============================================================================
@@ -208,60 +206,6 @@ terms above.
 
 ===============================================================================
 END OF `lodash/lodash` NOTICES AND INFORMATION
-
-%% `olivernn/lunr.js` NOTICES AND INFORMATION BEGIN HERE
-===============================================================================
-
-Copyright (C) 2013 by Oliver Nightingale
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-===============================================================================
-END OF `olivernn/lunr.js` NOTICES AND INFORMATION
-
-%% `julmot/mark.js` NOTICES AND INFORMATION BEGIN HERE
-===============================================================================
-
-The MIT License (MIT)
-
-Copyright (c) 2014–2018 Julian Kühnel
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-===============================================================================
-END OF `julmot/mark.js` NOTICES AND INFORMATION
 
 %% `alphagov/govuk-frontend` NOTICES AND INFORMATION BEGIN HERE
 ===============================================================================
