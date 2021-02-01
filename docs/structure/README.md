@@ -81,8 +81,8 @@ The [contributing guidelines][contributing] for this project.
 ### `LICENSE`
 
 The licence for this project. Unless stated otherwise, the codebase is released under the MIT License. This covers both
-the codebase and any sample code in the documentation. The documentation is © Crown copyright and available under the
-terms of the Open Government 3.0 licence.
+the codebase and any sample code in the documentation. Additional third-party component licences are stated in the
+`LICENSE` file. The documentation is © Crown copyright and available under the terms of the Open Government 3.0 licence.
 
 ### `Makefile`
 
