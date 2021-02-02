@@ -125,6 +125,10 @@ html_theme_options = {
     "phase": "Discovery"
 }
 
+# Base URL which points to the root of the HTML documentation. It is used to indicate the location of document using
+# The Canonical Link Relation (https://tools.ietf.org/html/rfc6596)
+# html_baseurl = ""
+
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [".."]
 

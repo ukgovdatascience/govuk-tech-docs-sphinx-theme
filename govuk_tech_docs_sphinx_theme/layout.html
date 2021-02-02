@@ -4,10 +4,12 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>GOV.UK Documentation Example - My First Service</title>
+    {%- block htmltitle %}
+      <title>{{ title|striptags|e }}{{ titlesuffix }} - {{ theme_department }} {{ project }}</title>
+    {%- endblock %}
 
     {%- block scripts %}
-    <script id="documentation_options" data-url_root="{{ url_root }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+    <script id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
     <script src="{{ pathto('_static/javascripts/_vendor/jquery.js', 1) }}"></script>
     <script src="{{ pathto('_static/underscore.js', 1) }}"></script>
     <script src="{{ pathto('_static/doctools.js', 1) }}"></script>
@@ -31,21 +33,25 @@
 
     <link href="{{ pathto('_static/stylesheets/manifest.css', 1) }}" rel="stylesheet" />
     <link href="{{ pathto('_static/stylesheets/custom.css', 1) }}" rel="stylesheet" />
-    <link rel="canonical" href="source/">
+    {%- if pageurl %}
+    <link rel="canonical" href="{{ pageurl|e }}" />
+    {%- endif %}
     {%- if favicon %}
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
     {% else %}
     <link rel="shortcut icon" href="{{ pathto('_static/', 1) }}/favicon.ico"/>
     {% endif -%}
+    {%- if pageurl %}
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" content="source/images/govuk-large.png" />
-    <meta name="twitter:title" content="GOV.UK Documentation Example - My First Service" />
-    <meta name="twitter:url" content="source/" />
-    <meta property="og:image" content="source/images/govuk-large.png" />
-    <meta property="og:site_name" content="My First Service" />
-    <meta property="og:title" content="GOV.UK Documentation Example" />
+    <meta name="twitter:image" content="{{ pathto('_static/assets/govuk/assets/images/govuk-opengraph-image.png', 1) }}" />
+    <meta name="twitter:title" content="{{ title|striptags|e }}{{ titlesuffix }} - {{ theme_department }} {{ project }}" />
+    <meta name="twitter:url" content="{{ pageurl|e }}" />
+    <meta property="og:image" content="{{ pathto('_static/assets/govuk/assets/images/govuk-opengraph-image.png', 1) }}" />
+    <meta property="og:site_name" content="{{ theme_department }} {{ project }}" />
+    <meta property="og:title" content="{{ title|striptags|e }}{{ titlesuffix }}" />
     <meta property="og:type" content="object" />
-    <meta property="og:url" content="source/" />
+    <meta property="og:url" content="{{ pageurl|e }}" />
+    {%- endif %}
   </head>
   <body class="govuk-template__body">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
