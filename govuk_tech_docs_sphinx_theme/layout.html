@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>GOV.UK Documentation Example - My First Service</title>
 
+    {%- block scripts %}
     <script id="documentation_options" data-url_root="{{ url_root }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
     <script src="{{ pathto('_static/javascripts/_vendor/jquery.js', 1) }}"></script>
     <script src="{{ pathto('_static/underscore.js', 1) }}"></script>
     <script src="{{ pathto('_static/doctools.js', 1) }}"></script>
-    <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
-    <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
-    <script src="{{ pathto('searchindex.js', 1) }}" defer></script>
+    {% endblock -%}
+    {% block extrahead %} {% endblock %}
 
     <script src="{{ pathto('_static/javascripts/_vendor/modernizer.js', 1) }}"></script>
     <script src="{{ pathto('_static/javascripts/_vendor/fixedsticky.js', 1) }}"></script>
