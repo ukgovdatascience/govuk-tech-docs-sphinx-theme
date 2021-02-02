@@ -1,15 +1,6 @@
 <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
-    <input type="hidden" name="as_sitesearch" value="https://tdt-documentation.london.cloudapps.digital/">
+  <form action="{{ pathto('search') }}" method="get" role="search">
     <label class="govuk-label search__label" for="search">Search</label>
     <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
   </form>
-
-  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
-    <div class="search-results__inner">
-      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Loading search index</h2>
-      <div class="search-results__content"></div>
-    </div>
-  </div>
 </div>
