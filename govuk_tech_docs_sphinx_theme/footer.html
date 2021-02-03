@@ -5,6 +5,11 @@
       <li class="govuk-footer__inline-list-item">
         <a class="govuk-footer__link" href="{{ pathto('accessibility.html', 1) }}">Accessibility</a>
       </li>
+      {%- if show_sphinx %}
+      <li class="govuk-footer__inline-list-item">
+        {% trans sphinx_version=sphinx_version|e %}Built with <a class="govuk-footer__link" href="https://www.sphinx-doc.org/">Sphinx</a> {{ sphinx_version }} using the <a class="govuk-footer__link" href="https://www.github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme">GOV.UK Tech Docs Sphinx Theme</a>.{% endtrans %}
+      </li>
+      {%- endif %}
     </ul>
     <svg
       aria-hidden="true"
