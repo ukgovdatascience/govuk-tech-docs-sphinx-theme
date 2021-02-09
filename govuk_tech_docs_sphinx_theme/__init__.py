@@ -1,4 +1,5 @@
 from functools import partial
+from govuk_tech_docs_sphinx_theme.components.warning_text import WarningText
 from pathlib import Path
 from typing import List
 
@@ -44,3 +45,6 @@ def setup(app) -> None:
 
     # Import required JavaScript files on build
     app.connect("builder-inited", partial(add_js_files, files=JAVASCRIPT_FILES))
+
+    # Add GOV.UK Design System components
+    app.add_directive("warning", WarningText)

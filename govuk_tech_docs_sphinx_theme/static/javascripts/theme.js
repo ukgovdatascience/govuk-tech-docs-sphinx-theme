@@ -11,3 +11,12 @@ $(function() {
     $(this).find('a.anchored-heading__icon').attr('href', '#' + $(this).parents('section').attr('id'));
   });
 });
+
+// Sets the `aria-hidden` attribute for the GOV.UK Design System warning text, and allows for multiline text. This is
+// generated using the `warning` directive created using the `WarningText` class
+$(function() {
+    $('div.govuk-warning-text.docutils.container').each(function() {
+        $(this).find('span.govuk-warning-text__icon').attr('aria-hidden', 'true');
+        $(this).find('strong.govuk-warning-text__text').css('white-space', 'pre-wrap');
+    });
+});
