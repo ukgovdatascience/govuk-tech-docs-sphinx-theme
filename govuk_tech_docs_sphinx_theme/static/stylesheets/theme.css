@@ -24,3 +24,8 @@ dl.footnote > dd:after, dl.citation > dd:after {
     content: "";
     clear: both;
 }
+
+/* Sets background of `<blockquote>` tags to the `<main>` background colour */
+.technical-documentation blockquote {
+    background: inherit
+}
