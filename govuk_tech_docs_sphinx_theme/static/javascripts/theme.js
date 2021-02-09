@@ -20,3 +20,15 @@ $(function() {
         $(this).find('strong.govuk-warning-text__text').css('white-space', 'pre-wrap');
     });
 });
+
+// Sets attributes, styles, and link classes for the GOV.UK Design System notification banner. This is generated using
+// the `note` directive created using the `NotificationBanner` class
+$(function() {
+    $('div.govuk-notification-banner.docutils.container').each(function() {
+        $(this).attr({role: 'region', 'aria-labelledby': 'govuk-notification-banner-title',
+                      'data-module': 'govuk-notification-banner'});
+        $(this).find('h2.govuk-notification-banner__title.anchored-heading > a.anchored-heading__icon').css('display', 'none');
+        $(this).find('p.govuk-notification-banner__heading').css('white-space', 'pre-wrap');
+        $(this).find('p.govuk-notification-banner__heading > a').addClass('govuk-notification-banner__link')
+    });
+});

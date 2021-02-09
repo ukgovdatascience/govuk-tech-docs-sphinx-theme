@@ -1,4 +1,5 @@
 from functools import partial
+from govuk_tech_docs_sphinx_theme.components.notification_banner import NotificationBanner
 from govuk_tech_docs_sphinx_theme.components.warning_text import WarningText
 from pathlib import Path
 from typing import List
@@ -48,3 +49,4 @@ def setup(app) -> None:
 
     # Add GOV.UK Design System components
     app.add_directive("warning", WarningText)
+    app.add_directive("note", NotificationBanner)
