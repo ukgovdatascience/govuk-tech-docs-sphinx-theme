@@ -5,3 +5,22 @@ a.headerlink {
 span.highlighted {
     background-color: #ffdd00;
 }
+
+/* Sets correct formatting for footnotes */
+a.brackets:before, span.brackets > a:before {
+    content: "[";
+}
+
+a.brackets:after, span.brackets > a:after {
+    content: "]";
+}
+
+dl.footnote > dt, dl.citation > dt {
+    float: left;
+    margin-right: 0.5em;
+}
+
+dl.footnote > dd:after, dl.citation > dd:after {
+    content: "";
+    clear: both;
+}
