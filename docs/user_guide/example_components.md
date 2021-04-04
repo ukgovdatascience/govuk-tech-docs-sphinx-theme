@@ -97,6 +97,26 @@ a_{21}& =b_{21}&
   a_{22}& =b_{22}+c_{22}
 \end{align}
 
+## Adding tables
+
+<!-- TODO: Add captions to tables -->
+
+Tables are rendered using standard Markdown table styles, so this:
+
+```
+| Column 1                     | Column 2                      |
+| :--------------------------- | ----------------------------: |
+| This column is left-aligned. | This column is right-aligned. |
+```
+
+becomes:
+
+| Column 1                     | Column 2                      |
+| :--------------------------- | ----------------------------: |
+| This column is left-aligned. | This column is right-aligned. |
+
+Note only left- and right-aligned columns are supported, according to the GOV.UK Design system.
+
 ## Including images
 
 <!-- TODO: Add captions to figures -->

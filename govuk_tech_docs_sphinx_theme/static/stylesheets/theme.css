@@ -27,10 +27,20 @@ dl.footnote > dd:after, dl.citation > dd:after {
 
 /* Sets background of `<blockquote>` tags to the `<main>` background colour */
 .technical-documentation blockquote {
-    background: inherit
+    background: inherit;
 }
 
 /* Sets equation reference numbers to the right of the equation */
 span.eqno {
     float: right;
+}
+
+/* Set tables to be auto-width */
+table.colwidths-auto {
+    display: block;
+}
+
+/* Right align table columns */
+th.text-align\:right.head, td.text-align\:right {
+    text-align: right;
 }
