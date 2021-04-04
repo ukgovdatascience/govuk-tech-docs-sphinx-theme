@@ -29,3 +29,8 @@ dl.footnote > dd:after, dl.citation > dd:after {
 .technical-documentation blockquote {
     background: inherit
 }
+
+/* Sets equation reference numbers to the right of the equation */
+span.eqno {
+    float: right;
+}
