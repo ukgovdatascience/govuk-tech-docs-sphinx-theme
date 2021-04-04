@@ -201,7 +201,21 @@ autosummary_generate = True
 # napoleon_use_param = True
 # napoleon_use_rtype = True
 
-# -- Options for MySt --------------------------------------------------------------------------------------------------
+# -- Options for MyST --------------------------------------------------------------------------------------------------
 
 # Enforce heading anchors for h1 to h6 headings
 myst_heading_anchors = 6
+
+# Enable MyST extensions
+myst_enable_extensions = [
+    "amsmath",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "html_admonition",
+    "html_image",
+    # "linkify",
+    "replacements",
+    "smartquotes",
+    "substitution"
+]
