@@ -10,12 +10,9 @@
 
     {%- block scripts %}
     <script id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
-    <script src="{{ pathto('_static/javascripts/_vendor/jquery.js', 1) }}"></script>
-    <script src="{{ pathto('_static/underscore.js', 1) }}"></script>
-    <script src="{{ pathto('_static/doctools.js', 1) }}"></script>
-    {% endblock -%}
-    {% block extrahead %} {% endblock %}
-
+    {%- for js in script_files %}
+    {{ js_tag(js) }}
+    {%- endfor %}
     <script src="{{ pathto('_static/javascripts/_vendor/modernizer.js', 1) }}"></script>
     <script src="{{ pathto('_static/javascripts/_vendor/fixedsticky.js', 1) }}"></script>
     <script src="{{ pathto('_static/javascripts/_vendor/lodash.js', 1) }}"></script>
@@ -31,6 +28,7 @@
     <script src="{{ pathto('_static/javascripts/_govuk/govuk-frontend-3.10.2.min.js', 1) }}"></script>
     <script src="{{ pathto('_static/javascripts/govuk_tech_docs.js', 1) }}"></script>
     <script src="{{ pathto('_static/javascripts/theme.js', 1) }}"></script>
+    {% endblock -%}
 
     <link href="{{ pathto('_static/stylesheets/manifest.css', 1) }}" rel="stylesheet" />
     <link href="{{ pathto('_static/stylesheets/theme.css', 1) }}" rel="stylesheet" />
@@ -53,6 +51,7 @@
     <meta property="og:type" content="object" />
     <meta property="og:url" content="{{ pageurl|e }}" />
     {%- endif %}
+    {% block extrahead %} {% endblock %}
   </head>
   <body class="govuk-template__body">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
