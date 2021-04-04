@@ -31,5 +31,5 @@ This project structure is based on the [`govcookiecutter`][govcookiecutter] temp
 
 [contributing]: ./CONTRIBUTING.md
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
-[docs-loading-environment-variables]: ./docs/user_guide/loading_environment_variables.md
+[docs-loading-environment-variables]: docs/contributor_guide/loading_environment_variables.md
 [pre-commit]: https://pre-commit.com/

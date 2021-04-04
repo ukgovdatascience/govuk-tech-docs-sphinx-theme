@@ -7,6 +7,7 @@ This is the contributor guide for the `govuk-tech-docs-sphinx-theme` project.
 ./CODE_OF_CONDUCT.md
 ./CONTRIBUTING.md
 ./pre_commit_hooks.md
+./loading_environment_variables.md
 ./updating_gitignore.md
 ./writing_sphinx_documentation.md
 ```
