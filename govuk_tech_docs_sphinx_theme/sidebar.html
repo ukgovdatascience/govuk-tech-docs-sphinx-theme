@@ -7,40 +7,13 @@
     <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
 
       {# Global table of contents #}
-      <ul>
-        {%- set nav = get_nav_object(maxdepth=6, collapse=True) -%}
-        {%- for main_nav_item in nav recursive -%}
-        <li>
-          <a href="{{ main_nav_item.url }}"><span>{{ main_nav_item.title }}</span></a>
-          {%- if main_nav_item.children -%}
-          <ul>{{ loop(main_nav_item.children) }}</ul>
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
+      {{ toctree() }}
       <hr size="1">
 
       {# Local table of contents #}
-      {%- set nav_local = get_page_toc_object() -%}
-      {%- if nav_local -%}
       <h2>On this page</h2>
+      {{ toc }}
 
-      <ul>
-        <li>
-          <a href="{{ name }}"><span>{{ title }}</span></a>
-          {%- for main_nav_local_item in nav_local recursive -%}
-          <ul>
-            <li>
-              <a href="{{ main_nav_local_item.url }}"><span>{{ main_nav_local_item.title }}</span></a>
-              {%- if main_nav_local_item.children -%}
-              <ul>{{ loop(main_nav_local_item.children) }}</ul>
-              {%- endif -%}
-            </li>
-          </ul>
-          {%- endfor -%}
-        </li>
-      </ul>
-      {%- endif -%}
     </nav>
   </div>
 </div>

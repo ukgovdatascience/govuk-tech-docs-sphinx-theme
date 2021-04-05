@@ -28,7 +28,6 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.napoleon",
     "myst_parser",
-    "pydata_sphinx_theme",
     "govuk_tech_docs_sphinx_theme"
 ]
 
