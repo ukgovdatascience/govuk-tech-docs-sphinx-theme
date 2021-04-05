@@ -1,0 +1,8 @@
+[run]
+source =
+    ./govuk_tech_docs_sphinx_theme
+
+[report]
+exclude_lines =
+    if __name__ == .__main__.:
+    __version__ = .*

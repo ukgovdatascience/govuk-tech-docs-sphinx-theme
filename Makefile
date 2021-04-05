@@ -1,4 +1,6 @@
 .PHONY:
+	coverage
+	coverage-html
 	docs
 	docs_check_external_links
 	help
@@ -12,6 +14,14 @@ requirements:
 	python3 -m pip install -U pip setuptools
 	python3 -m pip install -r requirements.txt
 	pre-commit install
+
+## Run code coverage
+coverage: requirements
+	coverage run -m pytest
+
+## Run code coverage, and produce a HTML output
+coverage-html: coverage
+	coverage html
 
 ## Create a `docs/_build` folder, if it doesn't exist. Otherwise delete any sub-folders and their contents within it
 prepare_docs_folder:
