@@ -1,4 +1,4 @@
-# Example components
+# Example components - Markdown
 
 Here is an example page containing the components of designed into this Sphinx theme. This text is part of the first
 header, but you should only use the first header once per page! All text on this page is written in Markdown, and
