@@ -10,9 +10,8 @@ ensuring that all of our code adheres to a certain quality standard.
 For this repository, we are using `pre-commit` for a number of purposes:
 
 - Checking for secrets being committed accidentally — see [here](#definition-of-a-secret-according-to-detect-secrets)
-  for the definition of a "secret";
-- Checking for any large files (over 5 MB) being committed; and
-- Cleaning Jupyter notebooks, which means removing all outputs and execution counts.
+  for the definition of a "secret"; and
+- Checking for any large files (over 5 MB) being committed.
 
 We have configured `pre-commit` to run automatically on _every commit_. By running on each commit, we ensure that
 `pre-commit` will be able to detect all contraventions and keep our repository in a healthy state.
@@ -85,17 +84,6 @@ no need to update the `.secrets.baseline` file in this case.
 
 If your commit contains a mixture of false-positives and actual secrets, remove the actual secrets first before
 updating and auditing the `.secrets.baseline` file.
-
-## Keeping specific Jupyter notebook outputs
-
-It may be necessary or useful to keep certain output cells of a Jupyter notebook, for example charts or graphs
-visualising some set of data. To do this, add the following comment at the top of the input block:
-
-```julia
-# [keep_output]
-```
-
-This will tell the hook not to strip the resulting output of this cell, allowing it to be committed.
 
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [detect-secrets-caveats]: https://github.com/Yelp/detect-secrets#caveats
