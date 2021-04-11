@@ -101,7 +101,7 @@ Further information on how to write Sphinx documentation, and how to build it in
 [docs-pre-commit-hooks-secrets-definition]: ./docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: ./docs/contributor_guide/updating_gitignore.md
 [docs-write-sphinx-documentation]: ./docs/contributor_guide/writing_sphinx_documentation.md
-[email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
+[email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
