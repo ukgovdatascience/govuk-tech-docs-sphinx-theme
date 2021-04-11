@@ -22,7 +22,7 @@ VERSION = "0.0.1"
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    "Sphinx==3.4.3"
+    "Sphinx>=3.4,<4"
 ]
 
 # What packages are optional?
