@@ -33,14 +33,12 @@ _________
 
 Here is some text under Heading 6. You should see me in the sidebar in the ``On this page`` section.
 
-.. |amsmath| replace:: ``amsmath`` syntax
-.. _amsmath: https://ctan.org/pkg/amsmath
 
 Adding mathematics
 ==================
 
-To render mathematics in Sphinx, you need to have the `Sphinx MathJax extension enabled`_. This example is taken
-directly from the `documentation`_ for MyST. If you write the following block of |amsmath|_: ::
+To render mathematics in Sphinx, you need to have the `Sphinx MathJax extension enabled <mathjax_>`_. This example is
+taken directly from the `documentation <myst_>`_ for MyST. If you write the following block of |amsmath|_: ::
 
     .. math::
         :label: eqn_a
@@ -85,7 +83,7 @@ Adding tables
 
 .. TODO: Add captions to tables
 
-Tables are rendered using standard Markdown table styles, so this: ::
+Tables are rendered using standard ReST table styles, so this: ::
 
     +--------------------+-------------------------+
     | Column 1           | Column 2                |
@@ -121,5 +119,44 @@ to include the image with the alt text ``GOV.UK logo`` at a set width of 200 pix
     :alt: GOV.UK logo
     :width: 200px
 
-.. _documentation: https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html#syntax-amsmath
-.. _Sphinx MathJax extension enabled: https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.mathjax
+GOV.UK Design System components
+===============================
+
+Some of the `GOV.UK Design System components <govuk-design-components_>`_ are incorporated into this theme.
+
+Notification banner
+-------------------
+
+To add a notification banner, add the following code to your ReST file: ::
+
+
+    .. note:: Notification banner title
+
+        A notification.
+
+which produces:
+
+.. note:: Notification banner title
+
+    A notification.
+
+Warning
+-------
+
+To add a warning, add the following code to your ReST file: ::
+
+    .. warning::
+
+        A warning.
+
+which produces:
+
+.. warning::
+
+    A warning.
+
+.. |amsmath| replace:: ``amsmath`` syntax
+.. _amsmath: https://ctan.org/pkg/amsmath
+.. _govuk-design-components: https://design-system.service.gov.uk/components/
+.. _mathjax: https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.mathjax
+.. _myst: https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html#syntax-amsmath

@@ -170,7 +170,52 @@ to include the image with the alt text `GOV.UK logo` at a set width of 200 pixel
 
 <img src="../_static/images/govuk-logo.png" alt="GOV.UK logo" width="200px">
 
+## GOV.UK Design System components
+
+Some of the [GOV.UK Design System components][govuk-design-components] are incorporated into this theme.
+
+### Notification banner
+
+To add a notification banner, add the following code to your Markdown file:
+
+````markdown
+```{note} Notification banner title
+
+A notification.
+
+```
+````
+
+which produces:
+
+```{note} Notification banner title
+
+A notification.
+
+```
+
+### Warning
+
+To add a warning, add the following code to your Markdown file:
+
+````markdown
+```{warning}
+
+A warning.
+
+```
+````
+
+which produces:
+
+```{warning}
+
+A warning.
+
+```
+
 [amsmath]: https://ctan.org/pkg/amsmath
+[govuk-design-components]: https://design-system.service.gov.uk/components/
 [myst]: https://myst-parser.readthedocs.io/
 [myst-amsmath]: https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html#syntax-amsmath
 [myst-maths]: https://myst-parser.readthedocs.io/en/latest/using/syntax.html?highlight=images#math-shortcuts
