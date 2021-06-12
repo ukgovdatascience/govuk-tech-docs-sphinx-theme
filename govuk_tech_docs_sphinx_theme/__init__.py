@@ -31,7 +31,7 @@ def add_js_files(app, files: List[Path]) -> None:
 
 
 def setup(app) -> None:
-    """Set up functoin for the Sphinx theme.
+    """Set up function for the Sphinx theme.
 
     Args:
         app: A ``sphinx.application.Sphinx`` object.

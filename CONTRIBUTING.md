@@ -72,11 +72,10 @@ pytest
 Code coverage of Python scripts is measured using the [`coverage`][coverage] Python package; its configuration can be
 found in `.coveragerc`. Note coverage only extends to Python scripts in the `govuk_tech_docs_sphinx_theme` folder.
 
-To run code coverage, and view it as an HTML report, execute the following commands in your terminal:
+To run code coverage, and view it as an HTML report, execute the following command in your terminal:
 
 ```shell
-coverage run -m pytest
-coverage html
+make coverage_html
 ```
 
 The HTML report can be accessed at `htmlcov/index.html`.
