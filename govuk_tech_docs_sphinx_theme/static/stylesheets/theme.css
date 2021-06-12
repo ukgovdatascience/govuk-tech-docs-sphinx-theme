@@ -257,3 +257,42 @@ th.text-align\:right.head, td.text-align\:right {
 .govuk-notification-banner--success .govuk-notification-banner__link:focus {
     color: #0b0c0c
 }
+
+/* GOV.UK h1 styles */
+.technical-documentation > section > h1, .govuk-heading-xl {
+  color: #0b0c0c;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.09375;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 30px; }
+  @media print {
+    .technical-documentation > section > h1, .govuk-heading-xl {
+      color: #000000; } }
+  @media print {
+    .technical-documentation > section > h1, .govuk-heading-xl {
+      font-family: sans-serif; } }
+  @media (min-width: 40.0625em) {
+    .technical-documentation > section > h1, .govuk-heading-xl {
+      font-size: 48px;
+      font-size: 3rem;
+      line-height: 1.0416666667; } }
+  @media print {
+    .technical-documentation > section > h1, .govuk-heading-xl {
+      font-size: 32pt;
+      line-height: 1.15; } }
+  @media (min-width: 40.0625em) {
+    .technical-documentation > section > h1, .govuk-heading-xl {
+      margin-bottom: 50px; } }
+  .technical-documentation > section > h1:first-of-type {
+    padding-top: 30px; }
+  .technical-documentation h1 code, .technical-documentation h2 code, .technical-documentation h3 code, .technical-documentation h4 code, .technical-documentation h5 code, .technical-documentation h6 code {
+    font-size: inherit;
+    color: #0b0c0c;
+    background: none;
+    padding: 0; }
