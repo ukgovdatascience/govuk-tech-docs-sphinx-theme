@@ -25,6 +25,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.autosummary",
+    "sphinx.ext.githubpages",
     "sphinx.ext.mathjax",
     "sphinx.ext.napoleon",
     "myst_parser",

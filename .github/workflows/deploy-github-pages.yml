@@ -1,0 +1,28 @@
+name: govuk-tech-docs-sphinx-theme deploy GitHub pages
+
+on:
+  release:
+    types: [ released ]
+
+jobs:
+  deploy-github-pages:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: make requirements
+        shell: bash
+      - name: Create documentation
+        run: make docs
+        shell: bash
+      - name: Publish to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: docs/_build

@@ -17,7 +17,7 @@ DESCRIPTION = "A Sphinx theme to replicate the GOV.UK Tech Docs Template."
 URL = "https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme"
 EMAIL = "gds-data-science@digital.cabinet-office.gov.uk"
 AUTHOR = "ukgovdatascience"
-REQUIRES_PYTHON = ">=3.8.0"
+REQUIRES_PYTHON = ">=3.6.1"
 VERSION = "0.0.1"
 
 # What packages are required for this module to be executed?
