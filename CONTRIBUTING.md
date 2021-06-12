@@ -9,8 +9,7 @@ Please read [`CODE_OF_CONDUCT.md`][code-of-conduct] before contributing.
 
 ## Getting started
 
-To start contributing, first ensure your system meets the [requirements][readme-requirements]. Next, install the
-required Python packages, and [pre-commit hooks][pre-commit] using:
+To start contributing, install the required Python packages, and [pre-commit hooks][pre-commit] using:
 
 ```shell
 make requirements
@@ -19,9 +18,9 @@ make requirements
 It is better to use the above make command, rather than `pip install -r requirements.txt` and `pre-commit install`, as
 the command will ensure your pre-commit hooks are up-to-date with any changes made.
 
-The pre-commit hooks are a security feature to ensure no secrets<sup>[1](#footnote-1)</sup>, large data files, and
-Jupyter notebook outputs are accidentally committed into the repository. For more information about the pre-commit hooks used
-in this repository, see the [documentation][docs-pre-commit-hooks].
+The pre-commit hooks are a security feature to ensure no secrets<sup>[1](#footnote-1)</sup>, and large data files, are
+accidentally committed into the repository. For more information about the pre-commit hooks used in this repository,
+see the [documentation][docs-pre-commit-hooks].
 
 ## Code conventions
 
@@ -101,7 +100,7 @@ Further information on how to write Sphinx documentation, and how to build it in
 [docs-pre-commit-hooks-secrets-definition]: ./docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: ./docs/contributor_guide/updating_gitignore.md
 [docs-write-sphinx-documentation]: ./docs/contributor_guide/writing_sphinx_documentation.md
-[email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
+[email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide

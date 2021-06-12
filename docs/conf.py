@@ -9,10 +9,10 @@
 # If extensions (or modules to document with autodoc) are in another directory, add these directories to sys.path here.
 # If the directory is relative to the documentation root, use os.path.abspath to make it absolute, like shown here.
 
-# import os
+import os
 import subprocess
-# import sys
-# sys.path.insert(0, os.path.abspath("."))
+import sys
+sys.path.insert(0, os.path.abspath("."))
 
 # -- General configuration ------------------------------------------------
 
@@ -44,7 +44,7 @@ source_suffix = {
 master_doc = "index"
 
 # General information about the project.
-project = "Tech Docs Sphinx Theme"
+project = "GOV.UK Tech Docs Sphinx Theme"
 author = "Government Digital Service"
 
 # List of patterns, relative to source directory, that match files and directories to ignore when looking for source
@@ -55,38 +55,17 @@ exclude_patterns = [
     ".DS_Store",
     "README.md"]
 
-# The reST default role (used for this markup: `text`) to use for all documents.
-# default_role = None
-
-# If true, '()' will be appended to :func: etc. cross-reference text.
-# add_function_parentheses = True
-
-# If true, the current module name will be prepended to all description unit titles (such as .. function::).
-# add_module_names = True
-
-# If true, sectionauthor and moduleauthor directives will be shown in the output. They are ignored by default.
-# show_authors = False
-
-# A list of ignored prefixes for module index sorting.
-# modindex_common_prefix = []
-
-# If true, keep warnings as 'system message' paragraphs in the built documents.
-# keep_warnings = False
-
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
-
-# -- Git commit hash ---------------------------------------------------------------------------------------------------
+# -- Options for govuk-tech-docs-sphinx-theme --------------------------------------------------------------------------
 
 # Get the latest Git commit hash — this is used to redirect the 'View Source' link correctly. If this fails, default to
-# `master`. Based on code snippet from:
+# `main`. Based on code snippet from:
 # https://github.com/sphinx-doc/sphinx/blob/1ebc9c26c7a4c484733beb9f8e39e93846d86494/sphinx/__init__.py#L53
 try:
     p = subprocess.run(["git", "show", "-s", "--pretty=format:%H"], stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                        encoding="ascii")
-    git_version = p.stdout if p.stdout else "master"
+    git_version = p.stdout if p.stdout else "main"
 except Exception:
-    git_version = "master"
+    git_version = "main"
 
 # -- Options for HTML output -------------------------------------------------------------------------------------------
 
@@ -98,13 +77,14 @@ html_context = {
     "github_url": "https://www.github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme",
     "gitlab_url": None,
     "conf_py_path": "docs/",
-    "version": git_version
+    "version": git_version,
+    "accessibility": "accessibility.md"
 }
 
 # Theme options are theme-specific and customize the look and feel of a theme further.  For a list of options available
 # for each theme, see the documentation.
 html_theme_options = {
-    "department": "GOV.UK",
+    "department": "GDS",
     "phase": "Discovery"
 }
 

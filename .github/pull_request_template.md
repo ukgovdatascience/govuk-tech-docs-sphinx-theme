@@ -1,7 +1,7 @@
 # Summary
 
 Add your summary here - keep it brief, to the point, and in plain English. For further information about pull requests,
-check out the [GDS Way][gds-way].
+check out the [GDS Way](https://gds-way.cloudapps.digital/standards/pull-requests.html).
 
 # Checklists
 
@@ -26,4 +26,3 @@ Comments have been added below around the incomplete checks.
 
 [agilemodeling]: http://agilemodeling.com/essays/documentLate.htm
 [data-ethics-framework]: https://www.gov.uk/government/publications/data-ethics-framework
-[gds-way]: https://gds-way.cloudapps.digital/standards/pull-requests.html

@@ -3,7 +3,7 @@
   <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
     <ul class="govuk-footer__inline-list">
       <li class="govuk-footer__inline-list-item">
-        <a class="govuk-footer__link" href="{{ pathto('accessibility.html', 1) }}">Accessibility</a>
+        <a class="govuk-footer__link" href="{{ pathto(accessibility.rsplit('.', 1)[0]) }}">Accessibility</a>
       </li>
       {%- if show_sphinx %}
       <li class="govuk-footer__inline-list-item">
