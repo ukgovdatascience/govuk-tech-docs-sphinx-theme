@@ -15,7 +15,7 @@ from setuptools import find_packages, setup, Command
 NAME = "govuk-tech-docs-sphinx-theme"
 DESCRIPTION = "A Sphinx theme to replicate the GOV.UK Tech Docs Template."
 URL = "https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme"
-EMAIL = "gds-data-science@digital.cabinet-office.gov.uk"
+EMAIL = "gdsdatascience@digital.cabinet-office.gov.uk"
 AUTHOR = "ukgovdatascience"
 PACKAGES = find_packages(where="src")
 REQUIRES_PYTHON = ">=3.6.1"

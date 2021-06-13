@@ -127,7 +127,7 @@ This project structure is based on the [`govcookiecutter`][govcookiecutter] temp
 [docs-example-components-md]: ./docs/example_components/markdown.md
 [docs-example-components-rest]: ./docs/example_components/restructuredtext.rst
 [docs-loading-environment-variables]: docs/contributor_guide/loading_environment_variables.md
-[email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
+[email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
 [govuk-accessibility]: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps
 [govuk-design]: https://design-system.service.gov.uk/
