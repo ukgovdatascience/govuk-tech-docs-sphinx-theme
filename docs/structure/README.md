@@ -14,19 +14,6 @@ This page provides information on the repository's structure. The repository's f
 
 Each subsection here contains a brief description about the files at the top-level of this Git repository.
 
-### `.coveragerc`
-
-A file containing configuration settings for the [`coverage`][coverage] Python package. When executed with
-[`pytest`][pytest] using the following command:
-
-```shell
-coverage run -m pytest
-coverage html
-```
-
-a code coverage report in HTML will be produced on the code in the `govuk_tech_docs_sphinx_theme` folder. This HTMl
-report can be accessed at `htmlcov/index.html`.
-
 ### `.envrc`
 
 A file containing environment variables for the Git repository that can be selectively loaded. This uses the
@@ -35,14 +22,16 @@ A file containing environment variables for the Git repository that can be selec
 This file contains a `sed` command to output a `.env` file with all the environment variables. This may be useful for
 sourcing environment variables, for example in conjunction with PyCharm's EnvFile plugin.
 
-To ensure this `sed` command works correctly, make sure any file paths listed in this file are absolute file paths, or
-relative file paths that do not use other environment variables. For example:
+To ensure this `sed` command works correctly, make sure any file paths listed in this file are absolute file paths
+(recommended), or relative file paths using other environment variables (works for Python users only). Environment
+variable names can only contain letters, numbers or underscores as well. For example:
 
 ```shell
-export DIR_DATA=$(pwd)/data  # fine
-export DIR_DATA_EXTERNAL=$(pwd)/data/external  # fine
-export DIR_DATA_EXTERNAL=./data/external  # fine
-export DIR_DATA_EXTERNAL=$DIR_DATA/external  # will break the `sed` command!
+export DIR_DATA=$(pwd)/data  # fine for Python and R users
+export DIR_DATA_EXTERNAL=$(pwd)/data/external  # fine for Python and R users
+export DIR_DATA_EXTERNAL=./data/external  # fine for Python and R users
+export DIR_DATA_EXTERNAL=$DIR_DATA/external  # fine for Python users only
+export DIR-DATA-EXTERNAL=$DIR_DATA/external  # will break the `sed` command!
 ```
 
 ### `.flake8`
@@ -93,14 +82,38 @@ top-level of the Git repository.
 make help
 ```
 
-### `pytest.ini`
+### `pyproject.toml`
 
-A file containing configuration settings for the [`pytest`][pytest] Python package. To run tests within the `tests`
-folder, execute the following command:
+A file containing Python project settings. This includes configuration settings for:
+
+- [`isort`](#isort)
+- [`pytest`](#pytest)
+- [Code coverage](#code-coverage)
+
+#### `isort`
+
+Python imports are arranged according to the specification defined by [`black`][black].
+
+#### `pytest`
+
+To run the tests within the [`tests`][docs-tests] folder using the [`pytest`][pytest] Python package, execute the
+following command:
 
 ```shell
 pytest
 ```
+
+#### Code coverage
+
+To run code coverage using the [`coverage`][coverage] Python package with [`pytest`][pytest], execute the following
+command:
+
+```shell
+make coverage_html
+```
+
+A code coverage report in HTML will be produced on the code in the `src` folder. This HTML report can be accessed at
+`htmlcov/index.html`.
 
 ### `README.md`
 
@@ -120,6 +133,7 @@ Alternatively, to install the requirements file along with pre-commit hooks, run
 make requirements
 ```
 
+[black]: https://black.readthedocs.io/en/stable/
 [code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
 [contributing]: ../contributor_guide/CONTRIBUTING.md
 [coverage]: https://coverage.readthedocs.io/

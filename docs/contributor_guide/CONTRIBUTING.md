@@ -38,7 +38,7 @@ merges, as well as the entry on `git push --force-with-lease` instead of `git pu
 If you want to modify the `.gitignore` files, see the template [documentation][docs-updating-gitignore] for further
 details.
 
-Our source code is stored on GitHub. Pull requests into `master` require at
+Our source code is stored on GitHub. Pull requests into `main` require at
 least one approved review.
 
 ### Python
@@ -62,9 +62,8 @@ example with long hyperlinks.
 
 ## Testing
 
-Tests are written using the [pytest][pytest] framework, with its configuration in the `pytest.ini` file. Note, only
-tests in the `tests` folder are executed. To run the tests, execute the
-following command in your terminal:
+Tests are written using the [pytest][pytest] framework, with its configuration in the `pyproject.toml` file. Note, only
+tests in the `tests` folder are executed. To run the tests, execute the following command in your terminal:
 
 ```shell
 pytest
@@ -73,7 +72,7 @@ pytest
 ### Code coverage
 
 Code coverage of Python scripts is measured using the [`coverage`][coverage] Python package; its configuration can be
-found in `.coveragerc`. Note coverage only extends to Python scripts in the `govuk_tech_docs_sphinx_theme` folder.
+found in `pyproject.toml`. Note coverage only extends to Python scripts in the `govuk_tech_docs_sphinx_theme` folder.
 
 To run code coverage, and view it as an HTML report, execute the following command in your terminal:
 
