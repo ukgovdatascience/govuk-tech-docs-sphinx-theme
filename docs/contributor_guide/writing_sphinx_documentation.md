@@ -32,7 +32,7 @@ To create a website with your documentation, run the following command in your t
 at the top-level of this project:
 
 ```shell
-make docs
+poetry run make docs
 ```
 
 This should create an HTML version of your documentation accessible from

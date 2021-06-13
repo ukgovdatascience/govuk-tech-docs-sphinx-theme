@@ -10,16 +10,20 @@ Please read [`CODE_OF_CONDUCT.md`][code-of-conduct] before contributing.
 
 ## Getting started
 
-To start contributing, install the required Python packages, and
-[pre-commit hooks][pre-commit] using:
+To start contributing, first make sure your system meets these requirements:
+
+1. Python 3.6.1+ installed
+2. [`poetry` installed][poetry-install]
+
+Then install the required Python packages, and [pre-commit hooks][pre-commit] using:
 
 ```shell
-make requirements
+poetry run make dependencies
 ```
 
-It is better to use the above make command, rather than
-`pip install -r requirements.txt` and `pre-commit install`, as the command will ensure
-your pre-commit hooks are up-to-date with any changes made.
+It is better to use the above make command, rather than `poetry install` and
+`poetry run pre-commit install`, as the command will ensure your pre-commit hooks are
+up-to-date with any changes made.
 
 The pre-commit hooks are a security feature to ensure no secrets[^1], and large data
 files, are accidentally committed into the repository. For more information about the
@@ -86,7 +90,7 @@ To run code coverage, and view it as an HTML report, execute the following comma
 your terminal:
 
 ```shell
-make coverage_html
+poetry run make coverage_html
 ```
 
 The HTML report can be accessed at `htmlcov/index.html`.
@@ -111,5 +115,6 @@ searchable website can be found [here][docs-write-sphinx-documentation].
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
 [myst]: https://myst-parser.readthedocs.io/
+[poetry-install]: https://python-poetry.org/docs/
 [pre-commit]: https://pre-commit.com/
 [pytest]: https://docs.pytest.org/

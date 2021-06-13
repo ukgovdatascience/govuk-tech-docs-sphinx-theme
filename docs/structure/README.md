@@ -91,13 +91,14 @@ The `Makefile` contains a set of commands for the `make` utility. Run the `help`
 command for further information at the top-level of the Git repository.
 
 ```shell
-make help
+poetry run make help
 ```
 
 ### `pyproject.toml`
 
 A file containing Python project settings. This includes configuration settings for:
 
+- [`poetry`][poetry]
 - [`isort`](#isort)
 - [`pytest`](#pytest)
 - [Code coverage](#code-coverage)
@@ -121,7 +122,7 @@ To run code coverage using the [`coverage`][coverage] Python package with
 [`pytest`][pytest], execute the following command:
 
 ```shell
-make coverage_html
+poetry run make coverage_html
 ```
 
 A code coverage report in HTML will be produced on the code in the `src` folder. This
@@ -131,22 +132,6 @@ HTML report can be accessed at `htmlcov/index.html`.
 
 An overview of the Git repository, including all necessary instructions to execute the
 code.
-
-### `requirements.txt`
-
-A list of Python package requirements for this Git repository, which can be installed
-using the `pip install` command.
-
-```shell
-pip install --requirement requirements.txt
-```
-
-Alternatively, to install the requirements file along with pre-commit hooks, run the
-following command:
-
-```shell
-make requirements
-```
 
 [black]: https://black.readthedocs.io/en/stable/
 [code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
@@ -160,4 +145,5 @@ make requirements
 [flake8]: https://gitlab.com/pycqa/flake8
 [gds-way]: https://gds-way.cloudapps.digital
 [gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration
+[poetry]: https://python-poetry.org/
 [pytest]: https://docs.pytest.org/
