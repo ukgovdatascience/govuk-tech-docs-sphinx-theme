@@ -23,22 +23,48 @@ The latest released version can be installed from the [Python Package Index (PyP
 pip install govuk-tech-docs-sphinx-theme
 ```
 
-Alternatively, you can install the bleeding edge version directly from this repository using https:
+Alternatively, you can install the bleeding edge version directly from this repository using https or ssh:
 
 ```shell
 pip install -e git+https://git@github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme#egg=govuk_tech_docs_sphinx_theme
-```
-
-or using ssh:
-
-```shell
 pip install -e git+ssh://git@github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme#egg=govuk_tech_docs_sphinx_theme
 ```
 
+or a specific branch, say `example-branch` like so:
+
+```shell
+pip install -e git+https://git@github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme.git@example-branch#egg=govuk_tech_docs_sphinx_theme
+pip install -e git+ssh://git@github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme.git@example-branch#egg=govuk_tech_docs_sphinx_theme
+```
+
+
 ### Amend your Sphinx `conf.py` configuration file
 
-To use this Sphinx theme, modify your Sphinx `conf.py` configuration file to resemble the example one found
-[here][example-conf], filling in any placeholders, and adding other settings as required.
+To use this Sphinx theme, modify your Sphinx `conf.py` configuration file as follows:
+
+1. Add the theme in the list of `extensions`:
+   ```python
+   extensions = ["govuk_tech_docs_sphinx_theme"]
+   ```
+2. Make sure the `author`, and `project` variables reflect your organisation name, and project
+3. Set `html_theme = "govuk_tech_docs_sphinx_theme"`
+4. Set the `html_context` dictionary as follows:
+   ```python
+   html_context = {
+       "github_url": None,                  # if using GitHub, set to the URL of your repository as a string
+       "gitlab_url": None,                  # if using GitLab, set to the URL of your repository as a string
+       "conf_py_path": "docs/",             # assuming your Sphinx folder is called `docs`
+       "version": "main",                   # assuming `main` is your repository's default branch
+       "accessibility": "accessibility.md"  # assuming your accessibility statement is at `docs/accessibility.md`
+   }
+   ```
+5. Set the `html_theme_options` dictionary as follows:
+   ```python
+   html_theme_options = {
+       "department": "",  # replace with your organisation's abbreviation (ideally) or name - long text may not look nice
+       "phase": ""        # replace with an Agile project phase - see https://www.gov.uk/service-manual/agile-delivery
+   }
+   ```
 
 Note, note all Sphinx configuration settings are currently supported by this theme - feel free to
 [contribute](#contributing)!
@@ -48,13 +74,29 @@ Note, note all Sphinx configuration settings are currently supported by this the
 All public sector bodies have to meet the 2018 accessibility regulations unless exempt; see
 [here][govuk-accessibility] for further details.
 
-To add an accessibility statement, copy the example Markdown template
-[`example_accesibility.md`][example-accessibility] to the root of your Sphinx folder - this is the same location as
-your Sphinx `conf.py` configuration file. Add your accessibility statement; guidance can be found on
+To add an accessibility statement, create a blank Markdown file in the root of your Sphinx folder called
+`accessibility.md`; this is the same location as your Sphinx `conf.py` configuration file. Add the following header to
+your new Markdown file:
+
+```markdown
+---
+orphan: true
+---
+# Accessibility statement
+```
+
+followed by your accesibility statement; guidance on how to write one can be found on
 [GOV.UK][govuk-example-accessibility].
 
-Next, in your Sphinx `conf.py` file, amend the `accessibility` value of the `html_context` to reference the filename of
-your accessibility statement.
+Next, in your Sphinx `conf.py` file, check that the `html_context` variable has this file referenced, i.e.:
+
+```python
+html_context = {
+    ...,
+    "accessibility": "accessibility.md",
+    ...
+}
+```
 
 ## Troubleshooting
 
@@ -63,7 +105,7 @@ If you have difficulties with this theme, please raise an [issue][repository-iss
 ## Licence
 
 Unless stated otherwise, the codebase is released under the MIT License. This covers both the codebase and any sample
-code in the documentation. Additional third-party component licences are stated in the `LICENSE` file. The
+code in the documentation. Additional third-party component licences are stated in the [`LICENSE`][license] file. The
 documentation is © Crown copyright and available under the terms of the Open Government 3.0 licence.
 
 ## Contributing
@@ -75,14 +117,13 @@ If you want to help us build, and improve `govuk-tech-docs-sphinx-theme`, view o
 
 This project structure is based on the [`govcookiecutter`][govcookiecutter] template project.
 
-[contributing]: ./CONTRIBUTING.md
+[contributing]: ./docs/contributor_guide/CONTRIBUTING.md
+[docs-loading-environment-variables]: docs/contributor_guide/loading_environment_variables.md
 [email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
-[example-accessibility]: ./example_accessibility.md
-[example-conf]: ./example_conf.py
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
 [govuk-accessibility]: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps
 [govuk-example-accessibility]: https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website
-[docs-loading-environment-variables]: docs/contributor_guide/loading_environment_variables.md
+[license]: https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/blob/main/LICENSE
 [pre-commit]: https://pre-commit.com/
 [pypi]: https://pypi.org/project/govuk-tech-docs-sphinx-theme/
 [repository]: https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme

@@ -1,14 +1,11 @@
-# GOV.UK Tech Docs Sphinx Theme documentation
-
-Here is the documentation for the GOV.UK Tech Docs Sphinx Theme project.
-
-```{toctree}
-:hidden:
-self
+```{include} ../README.md
+:relative-docs: ./docs
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 2
+self
 ./user_guide/README.md
 ./contributor_guide/README.md
 ./structure/README.md
