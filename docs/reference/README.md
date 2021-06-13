@@ -1,7 +1,8 @@
 # Theme API reference
 
-This page gives an overview of all public `govuk_tech_docs_sphinx_theme` objects, functions and methods. All classes
-and functions exposed in `govuk_tech_docs_sphinx_theme.*` namespace are public.
+This page gives an overview of all public `govuk_tech_docs_sphinx_theme` objects,
+functions and methods. All classes and functions exposed in
+`govuk_tech_docs_sphinx_theme.*` namespace are public.
 
 <!-- Functions should be referenced in the `govuk_tech_docs_sphinx_theme.__init__.py` -->
 ```{eval-rst}

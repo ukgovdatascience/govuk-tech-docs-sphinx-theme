@@ -2,43 +2,49 @@
 Example components - reStructuredText
 =====================================
 
-Here is an example page containing the components of designed into this Sphinx theme. This text is part of the first
-header, but you should only use the first header once per page! All text on this page is written in reStructuredText
-(ReST).
+Here is an example page containing the components of designed into this Sphinx theme.
+This text is part of the first header, but you should only use the first header once
+per page! All text on this page is written in reStructuredText (ReST).
 
 You should see me in the sidebar in the ``On this page`` section.
 
 Heading 2
 =========
 
-Here is some text under Heading 2. You should see me in the sidebar in the ``On this page`` section.
+Here is some text under Heading 2. You should see me in the sidebar in the
+``On this page`` section.
 
 Heading 3
 ---------
 
-Here is some text under Heading 3. You should see me in the sidebar in the ``On this page`` section.
+Here is some text under Heading 3. You should see me in the sidebar in the
+``On this page`` section.
 
 Heading 4
 ^^^^^^^^^
 
-Here is some text under Heading 4. You should see me in the sidebar in the ``On this page`` section.
+Here is some text under Heading 4. You should see me in the sidebar in the
+``On this page`` section.
 
 Heading 5
 ~~~~~~~~~
 
-Here is some text under Heading 5. You should see me in the sidebar in the ``On this page`` section.
+Here is some text under Heading 5. You should see me in the sidebar in the
+``On this page`` section.
 
 Heading 6
 _________
 
-Here is some text under Heading 6. You should see me in the sidebar in the ``On this page`` section.
+Here is some text under Heading 6. You should see me in the sidebar in the
+``On this page`` section.
 
 
 Adding mathematics
 ==================
 
-To render mathematics in Sphinx, you need to have the `Sphinx MathJax extension enabled <mathjax_>`_. This example is
-taken directly from the `documentation <myst_>`_ for MyST. If you write the following block of |amsmath|_: ::
+To render mathematics in Sphinx, you need to have the
+`Sphinx MathJax extension enabled <mathjax_>`_. This example is taken directly from the
+`documentation <myst_>`_ for MyST. If you write the following block of |amsmath|_: ::
 
     .. math::
         :label: eqn_a
@@ -106,14 +112,15 @@ Including images
 
 .. TODO: Add captions to figures
 
-We have a GOV.UK logo image at ``../_static/images/govuk-logo.png``. To include the image in ReST, add the following
-text: ::
+We have a GOV.UK logo image at ``../_static/images/govuk-logo.png``. To include the
+image in ReST, add the following text: ::
 
     .. image:: ../_static/images/govuk-logo.png
         :alt: GOV.UK logo
         :width: 200px
 
-to include the image with the alt text ``GOV.UK logo`` at a set width of 200 pixels, like so:
+to include the image with the alt text ``GOV.UK logo`` at a set width of 200 pixels,
+like so:
 
 .. image:: ../_static/images/govuk-logo.png
     :alt: GOV.UK logo
@@ -122,7 +129,8 @@ to include the image with the alt text ``GOV.UK logo`` at a set width of 200 pix
 GOV.UK Design System components
 ===============================
 
-Some of the `GOV.UK Design System components <govuk-design-components_>`_ are incorporated into this theme.
+Some of the `GOV.UK Design System components <govuk-design-components_>`_ are
+incorporated into this theme.
 
 Notification banner
 -------------------

@@ -8,13 +8,12 @@ import pytest
 args_test_add_js_files = [
     [Path("hello/world.js")],
     [Path("foo/bar.js")],
-    [Path("hello/world.js"), Path("foo/bar.js")]
+    [Path("hello/world.js"), Path("foo/bar.js")],
 ]
 
 
 @pytest.mark.parametrize("test_input_files", args_test_add_js_files)
 class TestAddJsFiles:
-
     def test_calls_add_js_file_correctly(self, test_input_files: List[Path]) -> None:
         """Test that the `Sphinx.add_js_file` method is called correctly."""
 
@@ -24,4 +23,6 @@ class TestAddJsFiles:
         # Execute the function, and assert the `add_js_file` method is called correctly
         add_js_files(test_input_app, test_input_files)
         assert test_input_app.add_js_file.call_count == len(test_input_files)
-        test_input_app.add_js_file.assert_has_calls([call(a) for a in test_input_files], any_order=False)
+        test_input_app.add_js_file.assert_has_calls(
+            [call(a) for a in test_input_files], any_order=False
+        )

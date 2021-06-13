@@ -1,40 +1,47 @@
 # Example components - Markdown
 
-Here is an example page containing the components of designed into this Sphinx theme. This text is part of the first
-header, but you should only use the first header once per page! All text on this page is written in Markdown, and
-rendered by the [`myst-parser`][myst] package.
+Here is an example page containing the components of designed into this Sphinx theme.
+This text is part of the first header, but you should only use the first header once
+per page! All text on this page is written in Markdown, and rendered by the
+[`myst-parser`][myst] package.
 
 You should see me in the sidebar in the `On this page` section.
 
 ## Heading 2
 
-Here is some text under Heading 2. You should see me in the sidebar in the `On this page` section.
+Here is some text under Heading 2. You should see me in the sidebar in the
+`On this page` section.
 
 ### Heading 3
 
-Here is some text under Heading 3. You should see me in the sidebar in the `On this page` section.
+Here is some text under Heading 3. You should see me in the sidebar in the
+`On this page` section.
 
 #### Heading 4
 
-Here is some text under Heading 4. You should see me in the sidebar in the `On this page` section.
+Here is some text under Heading 4. You should see me in the sidebar in the
+`On this page` section.
 
 ##### Heading 5
 
-Here is some text under Heading 5. You should see me in the sidebar in the `On this page` section.
+Here is some text under Heading 5. You should see me in the sidebar in the
+`On this page` section.
 
 ###### Heading 6
 
-Here is some text under Heading 6. You should see me in the sidebar in the `On this page` section.
+Here is some text under Heading 6. You should see me in the sidebar in the
+`On this page` section.
 
 ## Adding mathematics
 
-To render mathematics in Sphinx, you need to have the [Sphinx MathJax extension enabled][sphinx-mathjax]. There are two
-allowed formats; [dollar](#dollar-syntax), and [amsmath](#amsmath-syntax).
+To render mathematics in Sphinx, you need to have the
+[Sphinx MathJax extension enabled][sphinx-mathjax]. There are two allowed formats;
+[dollar](#dollar-syntax), and [amsmath](#amsmath-syntax).
 
 ### Dollar syntax
 
-Inline mathematics can be written as `$e=mc^{2}$`, which is rendered as $e=mc^{2}$. For block mathematics, wrap your
-mathematics block with `$$`. For example:
+Inline mathematics can be written as `$e=mc^{2}$`, which is rendered as $e=mc^{2}$. For
+block mathematics, wrap your mathematics block with `$$`. For example:
 
 ```
 $$
@@ -48,7 +55,8 @@ $$
     e=mc^{2}
 $$
 
-You can also label block mathematics by adding parenthesis after the closing `$$` and reference it like:
+You can also label block mathematics by adding parenthesis after the closing `$$` and
+reference it like:
 
 ```
 $$
@@ -66,8 +74,8 @@ This is the equation for mass-energy equivalence {eq}`eqn:example`.
 
 ### `amsmath` syntax
 
-This example is taken directly from the [documentation][myst-amsmath] for MyST. If you write the following block of
-[`amsmath` syntax][amsmath]:
+This example is taken directly from the [documentation][myst-amsmath] for MyST. If you
+write the following block of [`amsmath` syntax][amsmath]:
 
 ```
 \begin{gather*}
@@ -115,14 +123,15 @@ becomes:
 | :--------------------------- | ----------------------------: |
 | This column is left-aligned. | This column is right-aligned. |
 
-Note only left- and right-aligned columns are supported, according to the GOV.UK Design system.
+Note only left- and right-aligned columns are supported, according to the GOV.UK Design
+system.
 
 ## Including images
 
 <!-- TODO: Add captions to figures -->
 
-To include images, you can use either Markdown, reStructuredText (ReST), or pure HTML. We have a GOV.UK logo image at
-`../_static/images/govuk-logo.png`.
+To include images, you can use either Markdown, reStructuredText (ReST), or pure HTML.
+We have a GOV.UK logo image at `../_static/images/govuk-logo.png`.
 
 ### Markdown
 
@@ -149,14 +158,16 @@ To include the image in ReST, add the following text:
 ```
 ````
 
-to include the image with the alt text `GOV.UK logo` at a set width of 200 pixels, like so:
+to include the image with the alt text `GOV.UK logo` at a set width of 200 pixels, like
+so:
 
 ```{image} ../_static/images/govuk-logo.png
 :alt: GOV.UK logo
 :width: 200px
 ```
 
-Note this ReST syntax will not render in Markdown viewers such as GitHub - use [HTML](#html) instead.
+Note this ReST syntax will not render in Markdown viewers such as GitHub - use
+[HTML](#html) instead.
 
 ### HTML
 
@@ -166,13 +177,15 @@ To include the image in HTML, add the following text:
 <img src="../_static/images/govuk-logo.png" alt="GOV.UK logo" width="200px">
 ```
 
-to include the image with the alt text `GOV.UK logo` at a set width of 200 pixels, like so:
+to include the image with the alt text `GOV.UK logo` at a set width of 200 pixels, like
+so:
 
 <img src="../_static/images/govuk-logo.png" alt="GOV.UK logo" width="200px">
 
 ## GOV.UK Design System components
 
-Some of the [GOV.UK Design System components][govuk-design-components] are incorporated into this theme.
+Some of the [GOV.UK Design System components][govuk-design-components] are incorporated
+into this theme.
 
 ### Notification banner
 

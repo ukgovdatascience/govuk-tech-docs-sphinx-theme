@@ -22,9 +22,7 @@ REQUIRES_PYTHON = ">=3.6.1"
 VERSION = "0.0.1"
 
 # What packages are required for this module to be executed?
-REQUIRED = [
-    "Sphinx>=3.4,<4"
-]
+REQUIRED = ["Sphinx>=3.4,<4"]
 
 # What packages are optional?
 EXTRAS = {}
@@ -102,7 +100,11 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    entry_points={"sphinx.html_themes": ["govuk_tech_docs_sphinx_theme = govuk_tech_docs_sphinx_theme"]},
+    entry_points={
+        "sphinx.html_themes": [
+            "govuk_tech_docs_sphinx_theme = govuk_tech_docs_sphinx_theme"
+        ]
+    },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
@@ -122,7 +124,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: Implementation :: CPython",
-        "Programming Language :: Python :: Implementation :: PyPy"
+        "Programming Language :: Python :: Implementation :: PyPy",
     ],
     # $ setup.py publish support.
     cmdclass={

@@ -1,6 +1,7 @@
 # `govuk-tech-docs-sphinx-theme` structure
 
-This page provides information on the repository's structure. The repository's folder structure is explained here:
+This page provides information on the repository's structure. The repository's folder
+structure is explained here:
 
 ```{toctree}
 :maxdepth: 2
@@ -12,19 +13,23 @@ This page provides information on the repository's structure. The repository's f
 
 ## Top-level files
 
-Each subsection here contains a brief description about the files at the top-level of this Git repository.
+Each subsection here contains a brief description about the files at the top-level of
+this Git repository.
 
 ### `.envrc`
 
-A file containing environment variables for the Git repository that can be selectively loaded. This uses the
-[`direnv`][direnv] shell extension; see their documentation for further information.
+A file containing environment variables for the Git repository that can be selectively
+loaded. This uses the [`direnv`][direnv] shell extension; see their documentation for
+further information.
 
-This file contains a `sed` command to output a `.env` file with all the environment variables. This may be useful for
-sourcing environment variables, for example in conjunction with PyCharm's EnvFile plugin.
+This file contains a `sed` command to output a `.env` file with all the environment
+variables. This may be useful for sourcing environment variables, for example in
+conjunction with PyCharm's EnvFile plugin.
 
-To ensure this `sed` command works correctly, make sure any file paths listed in this file are absolute file paths
-(recommended), or relative file paths using other environment variables (works for Python users only). Environment
-variable names can only contain letters, numbers or underscores as well. For example:
+To ensure this `sed` command works correctly, make sure any file paths listed in this
+file are absolute file paths (recommended), or relative file paths using other
+environment variables (works for Python users only). Environment variable names can
+only contain letters, numbers or underscores as well. For example:
 
 ```shell
 export DIR_DATA=$(pwd)/data  # fine for Python and R users
@@ -36,32 +41,37 @@ export DIR-DATA-EXTERNAL=$DIR_DATA/external  # will break the `sed` command!
 
 ### `.flake8`
 
-A configuration file for the [`flake8`][flake8] Python package that provides linting. This file is based on the
-[common configuration][gds-way-flake8] described on [The GDS Way][gds-way].
+A configuration file for the [`flake8`][flake8] Python package that provides linting.
+This file is based on the [common configuration][gds-way-flake8] described on
+[The GDS Way][gds-way].
 
 ### `.gitignore`
 
-A `.gitignore` file to ignore certain files and folders from this Git repository. See the
-[contributor guide][docs-updating-gitignore] for further information about modifying this file.
+A `.gitignore` file to ignore certain files and folders from this Git repository. See
+the [contributor guide][docs-updating-gitignore] for further information about
+modifying this file.
 
 ### `.pre-commit-config.yaml`
 
-A pre-commit hook configuration file. See the [contributor guide][docs-pre-commit-hooks] for further details.
+A pre-commit hook configuration file. See the
+[contributor guide][docs-pre-commit-hooks] for further details.
 
 ### `.secrets.baseline`
 
-Baseline file for the [`detect-secrets`][detect-secrets] package; this package detects secrets, and, in conjunction
-with `pre-commit`, prevents them from being committed to the repository. The baseline file flags secret-like data that
-the user deliberately wishes to commit the to repository.
+Baseline file for the [`detect-secrets`][detect-secrets] package; this package detects
+secrets, and, in conjunction with `pre-commit`, prevents them from being committed to
+the repository. The baseline file flags secret-like data that the user deliberately
+wishes to commit the to repository.
 
 ### `CODE_OF_CONDUCT.md`
 
-The [Code of Conduct][code-of-conduct] for contributors to this project, including maintainers and `ukgovdatascience`
-organisation owners.
+The [Code of Conduct][code-of-conduct] for contributors to this project, including
+maintainers and `ukgovdatascience` organisation owners.
 
 ### `conftest.py`
 
-File to contain shared fixture functions for the [pytest][pytest] tests in the `tests` folder.
+File to contain shared fixture functions for the [pytest][pytest] tests in the
+`tests` folder.
 
 ### `CONTRIBUTING.md`
 
@@ -69,14 +79,16 @@ The [contributing guidelines][contributing] for this project.
 
 ### `LICENSE`
 
-The licence for this project. Unless stated otherwise, the codebase is released under the MIT License. This covers both
-the codebase and any sample code in the documentation. Additional third-party component licences are stated in the
-`LICENSE` file. The documentation is © Crown copyright and available under the terms of the Open Government 3.0 licence.
+The licence for this project. Unless stated otherwise, the codebase is released under
+the MIT License. This covers both the codebase and any sample code in the
+documentation. Additional third-party component licences are stated in the `LICENSE`
+file. The documentation is © Crown copyright and available under the terms of the Open
+Government 3.0 licence.
 
 ### `Makefile`
 
-The `Makefile` contains a set of commands for the `make` utility. Run the `help` command for further information at the
-top-level of the Git repository.
+The `Makefile` contains a set of commands for the `make` utility. Run the `help`
+command for further information at the top-level of the Git repository.
 
 ```shell
 make help
@@ -96,8 +108,8 @@ Python imports are arranged according to the specification defined by [`black`][
 
 #### `pytest`
 
-To run the tests within the [`tests`][docs-tests] folder using the [`pytest`][pytest] Python package, execute the
-following command:
+To run the tests within the [`tests`][docs-tests] folder using the [`pytest`][pytest]
+Python package, execute the following command:
 
 ```shell
 pytest
@@ -105,29 +117,32 @@ pytest
 
 #### Code coverage
 
-To run code coverage using the [`coverage`][coverage] Python package with [`pytest`][pytest], execute the following
-command:
+To run code coverage using the [`coverage`][coverage] Python package with
+[`pytest`][pytest], execute the following command:
 
 ```shell
 make coverage_html
 ```
 
-A code coverage report in HTML will be produced on the code in the `src` folder. This HTML report can be accessed at
-`htmlcov/index.html`.
+A code coverage report in HTML will be produced on the code in the `src` folder. This
+HTML report can be accessed at `htmlcov/index.html`.
 
 ### `README.md`
 
-An overview of the Git repository, including all necessary instructions to execute the code.
+An overview of the Git repository, including all necessary instructions to execute the
+code.
 
 ### `requirements.txt`
 
-A list of Python package requirements for this Git repository, which can be installed using the `pip install` command.
+A list of Python package requirements for this Git repository, which can be installed
+using the `pip install` command.
 
 ```shell
 pip install --requirement requirements.txt
 ```
 
-Alternatively, to install the requirements file along with pre-commit hooks, run the following command:
+Alternatively, to install the requirements file along with pre-commit hooks, run the
+following command:
 
 ```shell
 make requirements
