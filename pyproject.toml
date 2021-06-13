@@ -11,7 +11,7 @@ python = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
 coverage = "^5.4"
-detect-secrets = "1.1.0"
+detect-secrets = "1.0.3"
 myst-parser = "^0.15"
 pre-commit = "^2.10"
 pytest = "^6.2"
