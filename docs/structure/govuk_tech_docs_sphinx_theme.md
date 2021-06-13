@@ -1,2 +1,2 @@
-```{include} ../../govuk_tech_docs_sphinx_theme/README.md
+```{include} ../../src/govuk_tech_docs_sphinx_theme/README.md
 ```

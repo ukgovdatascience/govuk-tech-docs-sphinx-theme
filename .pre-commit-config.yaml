@@ -5,7 +5,6 @@ repos:
     rev: 3.8.4
     hooks:
     -   id: flake8
-        args: ["govuk_tech_docs_sphinx_theme"]
 -   repo: https://github.com/Yelp/detect-secrets
     rev: v0.14.3
     hooks:
