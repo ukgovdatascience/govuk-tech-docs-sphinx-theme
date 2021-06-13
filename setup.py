@@ -19,7 +19,7 @@ EMAIL = "gdsdatascience@digital.cabinet-office.gov.uk"
 AUTHOR = "ukgovdatascience"
 PACKAGES = find_packages(where="src")
 REQUIRES_PYTHON = ">=3.6.1"
-VERSION = "0.0.1"
+VERSION = None  # imported later on directly from the package's `__version__.py`
 
 # What packages are required for this module to be executed?
 REQUIRED = ["Sphinx>=3.4,<4"]
@@ -46,7 +46,7 @@ except FileNotFoundError:
 about = {}
 if not VERSION:
     project_slug = NAME.lower().replace("-", "_").replace(" ", "_")
-    with open(os.path.join(here, project_slug, "__version__.py")) as f:
+    with open(os.path.join(here, "src", project_slug, "__version__.py")) as f:
         exec(f.read(), about)
 else:
     about["__version__"] = VERSION
