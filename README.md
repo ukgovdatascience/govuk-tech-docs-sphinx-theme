@@ -61,8 +61,8 @@ To use this Sphinx theme, modify your Sphinx `conf.py` configuration file as fol
 5. Set the `html_theme_options` dictionary as follows:
    ```python
    html_theme_options = {
-       "department": "",  # replace with your organisation's abbreviation (ideally) or name - long text may not look nice
-       "phase": ""        # replace with an Agile project phase - see https://www.gov.uk/service-manual/agile-delivery
+       "organisation": "",  # replace with your organisation's abbreviation (ideally) or name - long text may not look nice
+       "phase": ""          # replace with an Agile project phase - see https://www.gov.uk/service-manual/agile-delivery
    }
    ```
 

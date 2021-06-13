@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     {%- block htmltitle %}
-    <title>{{ title|striptags|e }}{{ titlesuffix }} - {{ theme_department }} {{ project }}</title>
+    <title>{{ title|striptags|e }}{{ titlesuffix }} - {{ theme_organisation }} {{ project }}</title>
     {%- endblock %}
 
     {%- block scripts %}
@@ -31,10 +31,10 @@
     {%- if pageurl %}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="{{ pathto('_static/assets/govuk/assets/images/govuk-opengraph-image.png', 1) }}" />
-    <meta name="twitter:title" content="{{ title|striptags|e }}{{ titlesuffix }} - {{ theme_department }} {{ project }}" />
+    <meta name="twitter:title" content="{{ title|striptags|e }}{{ titlesuffix }} - {{ theme_organisation }} {{ project }}" />
     <meta name="twitter:url" content="{{ pageurl|e }}" />
     <meta property="og:image" content="{{ pathto('_static/assets/govuk/assets/images/govuk-opengraph-image.png', 1) }}" />
-    <meta property="og:site_name" content="{{ theme_department }} {{ project }}" />
+    <meta property="og:site_name" content="{{ theme_organisation }} {{ project }}" />
     <meta property="og:title" content="{{ title|striptags|e }}{{ titlesuffix }}" />
     <meta property="og:type" content="object" />
     <meta property="og:url" content="{{ pageurl|e }}" />
