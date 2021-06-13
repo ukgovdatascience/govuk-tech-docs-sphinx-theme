@@ -9,10 +9,10 @@
 # If extensions (or modules to document with autodoc) are in another directory, add these directories to sys.path here.
 # If the directory is relative to the documentation root, use os.path.abspath to make it absolute, like shown here.
 
-import os
+# import os
 import subprocess
-import sys
-sys.path.insert(0, os.path.abspath("."))
+# import sys
+# sys.path.insert(0, os.path.abspath("."))
 
 # -- General configuration ------------------------------------------------
 
@@ -88,13 +88,6 @@ html_theme_options = {
     "department": "GDS",
     "phase": "Discovery"
 }
-
-# Base URL which points to the root of the HTML documentation. It is used to indicate the location of document using
-# The Canonical Link Relation (https://tools.ietf.org/html/rfc6596)
-# html_baseurl = ""
-
-# Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = [".."]
 
 # Add any paths that contain custom static files (such as style sheets) here, relative to this directory. They are
 # copied after the builtin static files, so a file named "default.css" will overwrite the builtin "default.css".
