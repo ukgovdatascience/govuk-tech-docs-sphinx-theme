@@ -4,6 +4,18 @@ from typing import List
 
 
 class WarningText(Directive):
+    """Create warning text based on the GOV.UK Design System.
+
+    The `warning text`_ is based on the GOV.UK Design System, excluding the `id` attributes. Some attributes are
+    generated using JavaScript in the `theme.js` file.
+
+    Returns:
+        A `nodes.Element` object containing the compiled warning text.
+
+    .. _warning text:
+        https://design-system.service.gov.uk/components/warning-text/
+
+    """
 
     required_arguments = 0
     optional_arguments = 0
@@ -11,18 +23,7 @@ class WarningText(Directive):
     has_content = True
 
     def run(self) -> List[nodes.Element]:
-        """Create warning text based on the GOV.UK Design System.
-
-        The `warning text`_ is based on the GOV.UK Design System, excluding the `id` attributes. Some attributes are
-        generated using JavaScript in the `theme.js` file.
-
-        Returns:
-            A `nodes.Element` object containing the compiled warning text.
-
-        .. _warning text:
-            https://design-system.service.gov.uk/components/warning-text/
-
-        """
+        """Create warning text based on the GOV.UK Design System."""
 
         # Assert there is content in the directive, and compile this as text, parsing any content
         # TODO: `nodes.raw` does not render reST - need to find a way to do this!

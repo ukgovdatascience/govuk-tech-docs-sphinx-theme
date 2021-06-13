@@ -866,5 +866,8 @@ source/*
 source/alphagov-tech-docs-template/*
 !source/alphagov-tech-docs-template/.template_version
 
+# Ignore the `docs/reference/api` folder
+docs/reference/api/*
+
 # Ignore the `.secrets` file
 .secrets

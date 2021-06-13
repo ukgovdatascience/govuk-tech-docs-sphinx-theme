@@ -4,6 +4,18 @@ from typing import List
 
 
 class NotificationBanner(Directive):
+    """Create a notification banner based on the GOV.UK Design System.
+
+    The `notification banner`_ is based on the GOV.UK Design System, excluding the `id` attributes. Some attributes
+    are generated using JavaScript in the `theme.js` file.
+
+    Returns:
+        A `nodes.Element` object containing the compiled notification banner.
+
+    .. _notification banner:
+        https://design-system.service.gov.uk/components/notification-banner/
+
+    """
 
     required_arguments = 1
     optional_arguments = 0
@@ -11,18 +23,7 @@ class NotificationBanner(Directive):
     has_content = True
 
     def run(self) -> List[nodes.Element]:
-        """Create a notification banner based on the GOV.UK Design System.
-
-        The `notification banner`_ is based on the GOV.UK Design System, excluding the `id` attributes. Some attributes
-        are generated using JavaScript in the `theme.js` file.
-
-        Returns:
-            A `nodes.Element` object containing the compiled notification banner.
-
-        .. _notification banner:
-            https://design-system.service.gov.uk/components/notification-banner/
-
-        """
+        """Create a notification banner based on the GOV.UK Design System."""
 
         # Assert there is content in the directive
         self.assert_has_content()

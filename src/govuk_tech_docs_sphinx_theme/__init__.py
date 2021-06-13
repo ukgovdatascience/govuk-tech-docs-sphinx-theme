@@ -4,6 +4,8 @@ from govuk_tech_docs_sphinx_theme.components.warning_text import WarningText
 from pathlib import Path
 from typing import List
 
+__all__ = ["add_js_files", "setup", "NotificationBanner", "WarningText"]
+
 # Define a `Path` object to the `static/javascripts` folder
 DIR_STATIC = Path(__file__).parent.joinpath("static")
 DIR_JAVASCRIPTS = DIR_STATIC.joinpath("javascripts")
