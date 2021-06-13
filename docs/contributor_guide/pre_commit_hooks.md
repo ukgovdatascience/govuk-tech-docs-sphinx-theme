@@ -25,9 +25,14 @@ In order for `pre-commit` to run, action is needed to configure it on your syste
 
 ## Using the `detect-secrets` pre-commit hook
 
-> ⚠️ The `detect-secrets` package does its best to prevent accidental committing of secrets, but it can't catch
-> everything. **It doesn't replace good software development practices!** See the definition of a secret
-> [here](#definition-of-a-secret-according-to-detect-secrets) for further information.
+```{note} Secret detection limitations
+
+The `detect-secrets` package does its best to prevent accidental committing of secrets, but it can't catch everything.
+**It doesn't replace good software development practices!**
+
+See the definition of a secret [here](#definition-of-a-secret-according-to-detect-secrets) for further information.
+
+```
 
 We use [`detect-secrets`][detect-secrets] to check that no secrets, as defined
 [here](#definition-of-a-secret-according-to-detect-secrets), are accidentally committed. This hook requires you to
