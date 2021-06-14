@@ -29,7 +29,7 @@ modified.
 
 These instructions assume you are running on macOS with administrator privileges using
 a bash terminal. For other ways of installing `direnv`, and its shell hooks, consult
-the package's [documentation][direnv].
+the `direnv` documentation.
 
 1. Open your terminal;
 2. Install `direnv` via [Homebrew][homebrew];

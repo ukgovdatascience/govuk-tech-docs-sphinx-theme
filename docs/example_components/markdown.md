@@ -117,7 +117,7 @@ Tables are rendered using standard Markdown table styles, so this:
 | This column is left-aligned. | This column is right-aligned. |
 ```
 
-becomes:
+becomes the following rendered output in the Sphinx documentation:
 
 | Column 1                     | Column 2                      |
 | :--------------------------- | ----------------------------: |
@@ -194,7 +194,7 @@ To add a notification banner, add the following code to your Markdown file:
 ````markdown
 ```{note} Notification banner title
 
-A notification.
+A notification to flag some useful information to the user.
 
 ```
 ````
@@ -203,7 +203,7 @@ which produces:
 
 ```{note} Notification banner title
 
-A notification.
+A notification to flag some useful information to the user.
 
 ```
 

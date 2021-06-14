@@ -30,8 +30,8 @@ files, are accidentally committed into the repository. For more information abou
 pre-commit hooks used in this repository, see the
 [documentation][docs-pre-commit-hooks].
 
-[^1]: Only secrets of specific patterns are detected by the pre-commit hooks. See
-      [here][docs-pre-commit-hooks-secrets-definition] for further details.
+[^1]: [Only secrets of specific patterns are detected by the pre-commit
+      hooks][docs-pre-commit-hooks-secrets-definition].
 
 ## Code conventions
 
@@ -101,8 +101,8 @@ We write our documentation in [MyST Markdown][myst] for use in Sphinx. This is m
 stored in the `docs` folder, unless it's more appropriate to store it elsewhere, like
 this file.
 
-Further information on how to write Sphinx documentation, and how to build it into a
-searchable website can be found [here][docs-write-sphinx-documentation].
+[Please read our guidance on how to write Sphinx
+documentation][docs-write-sphinx-documentation], and build it into a searchable website.
 
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/

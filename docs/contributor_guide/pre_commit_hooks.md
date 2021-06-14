@@ -10,9 +10,8 @@ is committed, ensuring that all of our code adheres to a certain quality standar
 
 For this repository, we are using `pre-commit` for a number of purposes:
 
-- Checking for secrets being committed accidentally — see
-  [here](#definition-of-a-secret-according-to-detect-secrets) for the definition of a
-  "secret"; and
+- Checking for secrets being committed accidentally — there is a strict [definition of
+  a "secret"](#definition-of-a-secret-according-to-detect-secrets); and
 - Checking for any large files (over 5 MB) being committed.
 
 We have configured `pre-commit` to run automatically on _every commit_. By running on
@@ -35,13 +34,13 @@ The `detect-secrets` package does its best to prevent accidental committing of s
 but it can't catch everything. **It doesn't replace good software development
 practices!**
 
-See the definition of a secret
-[here](#definition-of-a-secret-according-to-detect-secrets) for further information.
+See the [definition of a secret for further
+information](#definition-of-a-secret-according-to-detect-secrets).
 
 ```
 
-We use [`detect-secrets`][detect-secrets] to check that no secrets, as defined
-[here](#definition-of-a-secret-according-to-detect-secrets), are accidentally
+We use [`detect-secrets`][detect-secrets] to check that no
+[secrets](#definition-of-a-secret-according-to-detect-secrets), are accidentally
 committed. This hook requires you to generate a baseline file if one is not already
 present within the root directory. To create the baseline file, run the following at
 the root of the repository:
@@ -64,7 +63,7 @@ alert you accordingly.
 
 ### Definition of a "secret" according to `detect-secrets`
 
-The [`detect-secrets` documentation][detect-secrets], as of January 2021, says it works:
+The `detect-secrets` documentation, as of January 2021, says it works:
 
 > ...by running periodic diff outputs against heuristically crafted \[regular
 > expression\] statements, to identify whether any new secret has been committed.
@@ -78,8 +77,7 @@ To understand what types of secrets will be detected, read the
 [caveats][detect-secrets-caveats], and the list of
 [supported plugins][detect-secrets-plugins] that the package uses. Also, you should use
 secret variable names that contain words that will trip the KeywordDetector plugin; see
-the `DENYLIST` variable [here][detect-secrets-keyword-detector] for the full list of
-words.
+the [`DENYLIST` variable for the full list of words][detect-secrets-keyword-detector].
 
 ### If `pre-commit` detects secrets during commit
 

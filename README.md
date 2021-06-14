@@ -74,8 +74,8 @@ feel free to [contribute](#contributing)!
 
 ### Add an accessibility statement
 
-All public sector bodies have to meet the 2018 accessibility regulations unless exempt;
-see [here][govuk-accessibility] for further details.
+All public sector bodies have to meet the
+[2018 accessibility regulations][govuk-accessibility] unless exempt.
 
 To add an accessibility statement, create a blank Markdown file in the root of your
 Sphinx folder called `accessibility.md`; this is the same location as your Sphinx
@@ -109,7 +109,7 @@ some [GOV.UK Design System][govuk-design] components. See the
 [example components][docs-example-components-rest] page for further details.
 
 If you are using [MyST-Parser][myst] to build Sphinx documentation using Markdown, see
-the equivalent components page [here][docs-example-components-md].
+the [equivalent Markdown components page][docs-example-components-md].
 
 ## Troubleshooting
 

@@ -2,9 +2,9 @@
 
 This project is set up to produce documentation using [Sphinx][sphinx]; this page
 should give you a quick overview on how to write documentation for it. If you're
-looking for information on how to write **good** documentation take a look
-[here][writethedocs]; for Agile projects, consider [documenting late][agilemodeling] as
-well.
+looking for information on how to write **good** documentation take a look at
+[Write the Docs guide on writing documentation][writethedocs]; for Agile projects,
+consider [documenting late][agilemodeling] as well.
 
 ## Why should I bother? And why Sphinx?
 
@@ -72,14 +72,13 @@ This will create something similar to the pandas [API reference][pandas-api-refe
 ## Writing in ReST-enabled Markdown
 
 We use the [`myst-parser`][myst] package (MyST) to write Markdown that can also include
-ReST elements; the package [documentation][myst] is detailed, so we would recommend
-reviewing it. We will cover some of the more widely used elements in the following
-subsections.
+ReST elements; the package documentation is detailed, so we would recommend reviewing
+it. We will cover some of the more widely used elements in the following subsections.
 
 ### Embedding ReST directives
 
-Most ReST directives can be embedded into MyST Markdown — see
-[here][myst-rst-directives] for further details.
+Most ReST directives can be embedded into MyST Markdown — see the
+[MyST documentation][myst-rst-directives] for further details.
 
 ### Automatically creating docstring documentation (MyST Markdown)
 

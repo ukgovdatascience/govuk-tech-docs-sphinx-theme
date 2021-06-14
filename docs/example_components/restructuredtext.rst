@@ -97,7 +97,7 @@ Tables are rendered using standard ReST table styles, so this: ::
     | This is some data. | This is some more data. |
     +--------------------+-------------------------+
 
-becomes:
+becomes the following rendered output in the Sphinx documentation:
 
 +--------------------+-------------------------+
 | Column 1           | Column 2                |
@@ -140,13 +140,13 @@ To add a notification banner, add the following code to your ReST file: ::
 
     .. note:: Notification banner title
 
-        A notification.
+        A notification to flag some useful information to the user.
 
 which produces:
 
 .. note:: Notification banner title
 
-    A notification.
+    A notification to flag some useful information to the user.
 
 Warning
 -------
