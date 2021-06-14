@@ -63,6 +63,12 @@ secrets, and, in conjunction with `pre-commit`, prevents them from being committ
 the repository. The baseline file flags secret-like data that the user deliberately
 wishes to commit the to repository.
 
+### `build_alphagov_tech_docs_template.sh`
+
+A shell script to get a built version of the latest GOV.UK Tech Docs template; the
+[contributor guide on theme development contains instructions to execute this
+script][docs-theme-dev-shell].
+
 ### `CODE_OF_CONDUCT.md`
 
 The [Code of Conduct][code-of-conduct] for contributors to this project, including
@@ -93,6 +99,11 @@ command for further information at the top-level of the Git repository.
 ```shell
 poetry run make help
 ```
+
+### `poetry.lock`
+
+A lock file containing the packages and exact versions to replicate the Poetry
+environment that this code was developed in.
 
 ### `pyproject.toml`
 
@@ -141,6 +152,7 @@ code.
 [direnv]: https://direnv.net/
 [docs-pre-commit-hooks]: ../contributor_guide/pre_commit_hooks.md
 [docs-tests]: ./tests.md
+[docs-theme-dev-shell]: ../contributor_guide/theme_development.md#comparing-with-govuk-tech-docs-template
 [docs-updating-gitignore]: ../contributor_guide/updating_gitignore.md
 [flake8]: https://gitlab.com/pycqa/flake8
 [gds-way]: https://gds-way.cloudapps.digital
