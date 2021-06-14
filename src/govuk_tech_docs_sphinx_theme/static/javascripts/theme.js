@@ -32,3 +32,10 @@ $(function() {
         $(this).find('p.govuk-notification-banner__heading > a').addClass('govuk-notification-banner__link')
     });
 });
+
+// Remove Sphinx pilcrow header links - these already exist in the GOV.UK Tech Docs template
+$(function() {
+    $('a.headerlink').filter(function() {
+        return $(this).text() == '¶';
+    }).remove();
+});
