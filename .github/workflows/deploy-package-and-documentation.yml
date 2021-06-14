@@ -1,11 +1,11 @@
-name: govuk-tech-docs-sphinx-theme deploy GitHub pages
+name: govuk-tech-docs-sphinx-theme deploy package and documentation
 
 on:
   release:
     types: [ released ]
 
 jobs:
-  deploy-github-pages:
+  deploy-package-and-documentation:
 
     runs-on: ubuntu-latest
 
@@ -31,12 +31,14 @@ jobs:
         run: poetry install --no-interaction --no-root
       - name: Install dependencies
         run: poetry run make dependencies
-        shell: bash
       - name: Create documentation
         run: poetry run make docs
-        shell: bash
       - name: Publish to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: docs/_build
+      - name: Build and deploy package to PyPI
+        run: |
+          poetry build
+          poetry publish
