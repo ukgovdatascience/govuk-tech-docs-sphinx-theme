@@ -4,8 +4,7 @@ A Sphinx theme to replicate the GOV.UK Tech Docs Template.
 
 ```{warning}
 
-Where this documentation refers to the **root folder** we mean where this README.md is
-located.
+Where this documentation refers to the **root folder** we mean where this README.md is located.
 
 ```
 
