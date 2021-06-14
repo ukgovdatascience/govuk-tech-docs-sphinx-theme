@@ -31,7 +31,8 @@ class NotificationBanner(Directive):
         # Create a heading containing the required argument of the directive, and
         # compile this within a `<div>` tag
         notification_title = (
-            f'<h2 class="govuk-notification-banner__title">{self.arguments[0]}</h2>'
+            f'<h2 class="govuk-notification-banner__title" '
+            f'id="govuk-notification-banner-title">{self.arguments[0]}</h2>'
         )
         notification_header = nodes.raw(
             "",
