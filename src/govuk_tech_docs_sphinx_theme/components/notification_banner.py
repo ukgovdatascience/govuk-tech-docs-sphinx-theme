@@ -42,8 +42,9 @@ class NotificationBanner(Directive):
         )
 
         # Render the content within a `<p>` tag, parsing the actual text
+        # TODO: Issue with parsing nested content using the correct class
         notification_heading = nodes.paragraph(
-            classes=["govuk-notification-banner__heading"]
+            # classes=["govuk-notification-banner__heading"]
         )
         self.state.nested_parse(self.content, self.content_offset, notification_heading)
 
