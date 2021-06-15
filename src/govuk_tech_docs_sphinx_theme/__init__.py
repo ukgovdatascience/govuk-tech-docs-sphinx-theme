@@ -14,7 +14,7 @@ except ImportError:
 __all__ = ["add_js_files", "setup", "NotificationBanner", "WarningText"]
 
 try:
-    __version__ = version(__name__)
+    __version__ = version(__package__)
 except PackageNotFoundError:
     __version__ = "unknown"
 

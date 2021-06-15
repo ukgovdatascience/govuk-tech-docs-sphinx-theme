@@ -1,7 +1,7 @@
 # `poetry` configurations
 [tool.poetry]
 name = "govuk-tech-docs-sphinx-theme"
-version = "0.1.0"
+version = "1.0.0"
 description = "A Sphinx theme to replicate the GOV.UK Tech Docs Template."
 authors = ["ukgovdatascience"]
 license = "MIT"
