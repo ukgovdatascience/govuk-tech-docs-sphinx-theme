@@ -108,7 +108,7 @@ docstrings as ReST stub files][sphinx-autosummary].
 
 ### Including Markdown files outside the `docs` folder
 
-[MyST lets you include Markdown files outside the `docs` folder easily][myst-include].
+[MyST lets you include Markdown files outside the `docs` folder][myst-include].
 
 If a Markdown file (`../example.md`) only contains links that do not reference anything
 else in this project (including images), create a Markdown file within the `docs`

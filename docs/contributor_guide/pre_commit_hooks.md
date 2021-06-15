@@ -31,7 +31,7 @@ In order for `pre-commit` to run, action is needed to configure it on your syste
 ```{note} Secret detection limitations
 
 The `detect-secrets` package does its best to prevent accidental committing of secrets,
-but it can't catch everything. It doesn't replace good software development practices!
+but it may miss things. Instead, focus on good software development practices!
 
 See the [definition of a secret for further
 information](#definition-of-a-secret-according-to-detect-secrets).

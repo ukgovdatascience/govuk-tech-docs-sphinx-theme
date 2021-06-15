@@ -63,7 +63,7 @@ wishes to commit the to repository.
 ### `build_alphagov_tech_docs_template.sh`
 
 A shell script to get a built version of the latest GOV.UK Tech Docs template; the
-[contributor guide contains instructions to execute this script][docs-theme-dev-shell].
+[contributor guide contains instructions to run this script][docs-theme-dev-shell].
 
 ### `CODE_OF_CONDUCT.md`
 
@@ -115,7 +115,7 @@ Python imports are arranged according to the [specification defined by `black`][
 
 #### `pytest`
 
-To run the tests within the `tests` folder using the `pytest` Python package, execute
+To run the tests within the `tests` folder using the `pytest` Python package, enter
 the following command:
 
 ```shell
@@ -124,7 +124,7 @@ pytest
 
 #### Code coverage
 
-To run code coverage using the `coverage` Python package with `pytest`, execute the
+To run code coverage using the `coverage` Python package with `pytest`, enter the
 following command:
 
 ```shell
@@ -136,8 +136,7 @@ HTML report can be accessed at `htmlcov/index.html`.
 
 ### `README.md`
 
-An overview of the Git repository, including all necessary instructions to execute the
-code.
+An overview of the Git repository, including all necessary instructions to run the code.
 
 [black]: https://black.readthedocs.io/en/stable/
 [code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md

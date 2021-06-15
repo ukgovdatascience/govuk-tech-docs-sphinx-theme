@@ -39,7 +39,7 @@ large print, easy read, audio recording or braille:
 
 We're always looking to improve the accessibility of this website. If you find any
 problems not listed on this page or think we're not meeting accessibility requirements,
-contact us via [email][email], or [raise an issue on our Github
+contact us by [email][email], or [raise an issue on our Github
 repository][github-issues].
 
 ## Enforcement procedure

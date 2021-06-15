@@ -72,8 +72,8 @@ strictly enforced in all cases, for example with long hyperlinks.
 ## Testing
 
 [Tests are written using the `pytest` framework][pytest], with its configuration in the
-`pyproject.toml` file. Note, only tests in the `tests` folder are executed. To run the
-tests, execute the following command in your terminal:
+`pyproject.toml` file. Note, only tests in the `tests` folder are run. To run the
+tests, enter the following command in your terminal:
 
 ```shell
 pytest
@@ -85,7 +85,7 @@ pytest
 package][coverage]; its configuration can be found in `pyproject.toml`. Note coverage
 only extends to Python scripts in the `govuk_tech_docs_sphinx_theme` folder.
 
-To run code coverage, and view it as an HTML report, execute the following command in
+To run code coverage, and view it as an HTML report, enter the following command in
 your terminal:
 
 ```shell

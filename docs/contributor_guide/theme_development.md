@@ -61,7 +61,7 @@ for comparison, although they are both slightly different to the template.
 1. [Install ./jq][jq]
 2. [Install the requirements for the GOV.UK Tech Docs template][govuk-tech-docs], but
    stop before creating a new project
-3. Open your terminal at the root of this repository, and execute the
+3. Open your terminal at the root of this repository, and run the
    `build_alphagov_tech_docs_template.sh` shell script
    ```shell
    sh build_alphagov_tech_docs_template.sh

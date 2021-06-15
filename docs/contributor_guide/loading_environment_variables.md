@@ -31,7 +31,7 @@ a bash terminal. For other ways of installing `direnv`, and its shell hooks, con
 the `direnv` documentation.
 
 1. Open your terminal;
-2. [Install `direnv` via Homebrew][homebrew];
+2. [Install `direnv` using Homebrew][homebrew];
    ```shell
    brew install direnv
    ```
@@ -71,7 +71,7 @@ Once complete, make sure the `.secrets` file has the following line uncommented 
 source_env ".secrets"
 ```
 
-This ensures [`direnv`][direnv] loads the `.secrets` file via `.envrc` without
+This ensures [`direnv`][direnv] loads the `.secrets` file using `.envrc` without
 version-controlling `.secrets`.
 
 [direnv]: https://direnv.net/
