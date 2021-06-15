@@ -112,8 +112,8 @@ Including images
 
 .. TODO: Add captions to figures
 
-We have a GOV.UK logo image at ``../_static/images/govuk-logo.png``. To include the
-image in ReST, add the following text: ::
+We have a GOV.UK logo image at ``../_static/images/govuk-logo.png`` that we will use in
+the following example. To include the image in ReST, add the following text: ::
 
     .. image:: ../_static/images/govuk-logo.png
         :alt: GOV.UK logo

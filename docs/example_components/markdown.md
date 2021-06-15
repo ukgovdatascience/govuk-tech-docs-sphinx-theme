@@ -131,7 +131,8 @@ system.
 <!-- TODO: Add captions to figures -->
 
 To include images, you can use either Markdown, reStructuredText (ReST), or pure HTML.
-We have a GOV.UK logo image at `../_static/images/govuk-logo.png`.
+We have a GOV.UK logo image at `../_static/images/govuk-logo.png` that we will use in
+all the following examples.
 
 ### Markdown
 
