@@ -9,7 +9,7 @@ necessary for each and every project.
 
 It is strongly suggested that you import functions in the
 `govuk_tech_docs_sphinx_theme` `__init__.py` script. You should also try to use
-absolute imports in this script whenever possible; relative imports are not
+absolute imports in this script whenever possible. Relative imports are not
 discouraged, but can be an issue for projects where the directory structure is likely
 to change. See [PEP 328 for details on absolute imports][pep-328].
 

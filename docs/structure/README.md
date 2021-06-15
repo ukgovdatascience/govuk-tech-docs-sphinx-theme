@@ -27,8 +27,8 @@ variables. This may be useful for sourcing environment variables, for example in
 conjunction with PyCharm's EnvFile plugin.
 
 To ensure this `sed` command works correctly, make sure any file paths listed in this
-file are absolute file paths (recommended), or relative file paths using other
-environment variables (works for Python users only). Environment variable names can
+file are absolute file paths (recommended). Relative file paths using other
+environment variables only work for Python users. Environment variable names can
 only contain letters, numbers or underscores as well. For example:
 
 ```shell

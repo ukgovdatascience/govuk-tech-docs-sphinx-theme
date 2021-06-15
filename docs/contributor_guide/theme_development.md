@@ -21,8 +21,8 @@ This theme is based on commit [`1fb26fc`][current-version] of the
 ```
 
 The theme was developed by taking a build of the GOV.UK Tech Docs template, splitting
-it out into an acceptable Sphinx layout, and applying Sphinx blocks into the
-appropriate areas of the HTML. By default, the template CSS and JavaScript files
+it out into an acceptable Sphinx layout. Sphinx blocks were then applied to the
+appropriate areas of the HTML code. By default, the template CSS and JavaScript files
 supersede the inbuilt Sphinx ones, aside from a few cases (e.g. search).
 
 If you discover any bugs, and/or discrepancies, [please raise a GitHub issue][issue] on

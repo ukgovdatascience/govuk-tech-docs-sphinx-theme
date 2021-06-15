@@ -1,14 +1,14 @@
 # Writing Sphinx documentation
 
 [This project is set up to produce documentation using Sphinx][sphinx]; this page
-should give you a quick overview on how to write documentation for it. If you're
-looking for information on how to write good documentation take a look at [Write the
-Docs guide on writing documentation][writethedocs]; [for Agile projects, consider
-documenting late][agilemodeling] as well.
+should give you a quick overview on how to write documentation for it. If you'd like to
+know how to write good documentation take a look at [Write the Docs guide on writing
+documentation][writethedocs]. [For Agile projects, consider documenting
+late][agilemodeling] as well.
 
 ## Why should I bother? And why Sphinx?
 
-Keeping as much of the documentation in a centralised location is a good thing — it
+Keeping as much of the documentation in a centralised location is a good thing. It
 means contributors, users, and anyone else can quickly find as much information as they
 need to understand and/or run what you've done.
 
@@ -17,7 +17,7 @@ including HTML. This means you can write your documentation and, with a single t
 command, build it into a searchable website.
 
 It's widely used, such as for the documentation of the [`pandas`][pandas], and
-[PyTorch][pytorch] Python packages as well as many [others][sphinx-examples], and is
+[PyTorch][pytorch] Python packages as well as many [others][sphinx-examples]. It is
 highly customisable with different extensions, and themes. Included with this project
 is:
 
@@ -72,7 +72,7 @@ docstrings as ReST stub files][sphinx-autosummary].
 ## Writing in ReST-enabled Markdown
 
 [We use the `myst-parser` package (MyST) to write Markdown that can also include ReST
-elements][myst]; the package documentation is detailed, so we would recommend reviewing
+elements][myst]. The package documentation is detailed, so we would recommend reviewing
 it. We will cover some of the more widely used elements in the following subsections.
 
 ### Embedding ReST directives

@@ -21,9 +21,9 @@ Then install the required Python packages, and Git pre-commit hooks using:
 poetry run make dependencies
 ```
 
-It is better to use the above make command, rather than `poetry install` and
-`poetry run pre-commit install`, as the command will ensure your pre-commit hooks are
-up-to-date with any changes made.
+It is better to use the above `make` command, rather than `poetry install` and
+`poetry run pre-commit install`. This `make` command will ensures your pre-commit hooks
+are up-to-date with any changes made.
 
 The pre-commit hooks are a security feature to ensure, for example, no secrets[^1], and
 large data files, are accidentally committed into the repository. [For more information
@@ -39,7 +39,7 @@ on pre-commit hooks see our documentation][docs-pre-commit-hooks].
 ### Git and GitHub
 
 We use Git to version control the source code. [Please read the GDS Way for details on
-Git best practice][gds-way-git], including how to write good commit messages, use
+Git best practice][gds-way-git]. This includes how to write good commit messages, use
 `git rebase` for local branches and `git merge --no-ff` for merges, as well as using
 `git push --force-with-lease` instead of `git push -f`.
 

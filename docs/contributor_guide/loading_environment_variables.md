@@ -1,8 +1,7 @@
 # Loading environment variables
 
-[We use `direnv` to load environment variables][direnv], as it ensures you only have
-project-specific variables loaded when you are inside the project, otherwise these
-variables are not loaded. This can prevent accidental conflicts with identically named
+[We use `direnv` to load environment variables][direnv], as these are only loaded when
+inside the project folder. This can prevent accidental conflicts with identically named
 variables.
 
 ## Using `direnv`

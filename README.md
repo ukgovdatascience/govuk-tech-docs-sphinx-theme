@@ -68,7 +68,7 @@ To use this Sphinx theme, modify your Sphinx `conf.py` configuration file as fol
    }
    ```
 
-Note, not all Sphinx configuration settings are currently supported by this theme -
+Note, not all Sphinx configuration settings are currently supported by this theme —
 [feel free to contribute to support other settings](#contributing)!
 
 ### Add an accessibility statement
@@ -77,8 +77,8 @@ All public sector bodies have to meet the [2018 accessibility
 regulations][govuk-accessibility] unless exempt.
 
 To add an accessibility statement, create a blank Markdown file in the root of your
-Sphinx folder called `accessibility.md`; this is the same location as your Sphinx
-`conf.py` configuration file. Add the following header to your new Markdown file:
+Sphinx folder called `accessibility.md`. This folder is the same location as your
+Sphinx `conf.py` configuration file. Add the following header to your new Markdown file:
 
 ```markdown
 ---
@@ -87,7 +87,7 @@ orphan: true
 # Accessibility statement
 ```
 
-followed by your accesibility statement; [guidance on how to write an accessibility
+followed by your accesibility statement. [Guidance on how to write an accessibility
 statement can be found on GOV.UK][govuk-example-accessibility].
 
 Next, in your Sphinx `conf.py` file, check that the `html_context` variable has this
