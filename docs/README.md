@@ -1,4 +1,4 @@
-# `docs` folder
+# `docs` folder overview
 
 All documentation for the project should be included in this folder in either
 reStructuredText or Markdown files, with acceptable formatting for Sphinx.

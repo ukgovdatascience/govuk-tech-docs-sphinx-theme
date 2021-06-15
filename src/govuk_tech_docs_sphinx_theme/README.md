@@ -1,4 +1,4 @@
-# `govuk_tech_docs_sphinx_theme` package
+# `govuk_tech_docs_sphinx_theme` package overview
 
 All functions for this project, should be stored in this folder. All tests should be
 stored in the `tests` folder, which is two-level above this folder in the main project
