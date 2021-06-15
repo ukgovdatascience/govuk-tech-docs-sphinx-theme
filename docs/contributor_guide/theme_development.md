@@ -26,15 +26,15 @@ appropriate areas of the HTML. By default, the template CSS and JavaScript files
 supersede the inbuilt Sphinx ones, aside from a few cases (e.g. search).
 
 If you discover any bugs, and/or discrepancies, [please raise a GitHub issue][issue] on
-our repository ([check out our contributing guidelines][contributing], and
-[code of conduct][code-of-conduct] first).
+our repository ([check out our contributing guidelines][contributing], and [code of
+conduct][code-of-conduct] first).
 
 If you also want to contribute to the solution, please do raise a pull request too! The
 following sections will hopefully assist with fixing any bugs. Consider [reading the
 Sphinx documentation on templating][sphinx-templating], and [documentation on using
-Jinja templating][jinja]. For new or existing
-[GOV.UK Design System components][govuk-design-system], [read the Sphinx extension
-development documentation][sphinx-extension].
+Jinja templating][jinja]. For new or existing [GOV.UK Design System
+components][govuk-design-system], [read the Sphinx extension development
+documentation][sphinx-extension].
 
 ## Comparing with GOV.UK Tech Docs template
 
@@ -42,8 +42,8 @@ development documentation][sphinx-extension].
 template][current-version], and amending all HTML files to use relative paths for all
 assets (CSS, JavaScript, images, etc.).
 
-This repository contains an automated way to get the **latest** version of the
-template, and amend the paths on a Unix-based machine:
+This repository contains an automated way to get the latest version of the template,
+and amend the paths on a Unix-based machine:
 
 ```{note} For comparison purposes only
 

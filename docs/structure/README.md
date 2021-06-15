@@ -32,11 +32,11 @@ environment variables (works for Python users only). Environment variable names 
 only contain letters, numbers or underscores as well. For example:
 
 ```shell
-export DIR_DATA=$(pwd)/data  # fine for Python and R users
+export DIR_DATA=$(pwd)/data                    # fine for Python and R users
 export DIR_DATA_EXTERNAL=$(pwd)/data/external  # fine for Python and R users
-export DIR_DATA_EXTERNAL=./data/external  # fine for Python and R users
-export DIR_DATA_EXTERNAL=$DIR_DATA/external  # fine for Python users only
-export DIR-DATA-EXTERNAL=$DIR_DATA/external  # will break the `sed` command!
+export DIR_DATA_EXTERNAL=./data/external       # fine for Python and R users
+export DIR_DATA_EXTERNAL=$DIR_DATA/external    # fine for Python users only
+export DIR-DATA-EXTERNAL=$DIR_DATA/external    # will break the `sed` command!
 ```
 
 ### `.flake8`

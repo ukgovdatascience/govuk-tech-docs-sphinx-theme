@@ -19,7 +19,7 @@ the reviewers' discretion.
 This pull/merge request meets the following requirements:
 
 - [ ] Code runs
-- [ ] [Developments are **ethical**][data-ethics-framework] and **secure**
+- [ ] [Developments are ethical][data-ethics-framework] and secure
 - [ ] You have made proportionate checks that the code works correctly, and the theme
   works as expected
 - [ ] Test suite passes

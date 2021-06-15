@@ -14,7 +14,7 @@ For this repository, we are using `pre-commit` for a number of purposes:
   a "secret"](#definition-of-a-secret-according-to-detect-secrets); and
 - Checking for any large files (over 5 MB) being committed.
 
-We have configured `pre-commit` to run automatically on _every commit_. By running on
+We have configured `pre-commit` to run automatically on every commit. By running on
 each commit, we ensure that `pre-commit` will be able to detect all contraventions and
 keep our repository in a healthy state.
 
@@ -24,15 +24,14 @@ In order for `pre-commit` to run, action is needed to configure it on your syste
 
 - Install the `pre-commit` package by running `poetry install`
 - Run `poetry run pre-commit install` in your terminal to set up `pre-commit` to run
-  when code is _committed_.
+  when code is committed.
 
 ## Using the `detect-secrets` pre-commit hook
 
 ```{note} Secret detection limitations
 
 The `detect-secrets` package does its best to prevent accidental committing of secrets,
-but it can't catch everything. **It doesn't replace good software development
-practices!**
+but it can't catch everything. It doesn't replace good software development practices!
 
 See the [definition of a secret for further
 information](#definition-of-a-secret-according-to-detect-secrets).
@@ -55,9 +54,9 @@ poetry run detect-secrets audit .secrets.baseline
 ```
 
 When you run this command, you'll enter an interactive console and be presented with a
-list of high-entropy string and/or anything which _could_ be a secret, and asked to
+list of high-entropy string and/or anything which could be a secret, and asked to
 verify whether this is the case. By doing this, the hook will be in a position to know
-if you're later committing any _new_ secrets to the repository, and it will be able to
+if you're later committing any new secrets to the repository, and it will be able to
 alert you accordingly.
 
 ### Definition of a "secret" according to `detect-secrets`
@@ -68,9 +67,9 @@ The `detect-secrets` documentation, as of January 2021, says it works:
 > expression\] statements, to identify whether any new secret has been committed.
 
 This means it uses regular expression patterns to scan your code changes for anything
-that **looks like a secret according to one or more of these regular expression
-patterns**. By definition, there are only a limited number of patterns, so the
-`detect-secrets` package cannot detect every conceivable type of secret.
+that looks like a secret according to one or more of these regular expression patterns.
+By definition, there are only a limited number of patterns, so the `detect-secrets`
+package cannot detect every conceivable type of secret.
 
 To understand what types of secrets will be detected, [read the `detect-secrets`
 documentation on caveats][detect-secrets-caveats], and the [list of supported plugins

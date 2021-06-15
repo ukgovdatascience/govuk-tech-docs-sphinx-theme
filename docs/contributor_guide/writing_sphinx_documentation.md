@@ -2,9 +2,9 @@
 
 [This project is set up to produce documentation using Sphinx][sphinx]; this page
 should give you a quick overview on how to write documentation for it. If you're
-looking for information on how to write **good** documentation take a look at
-[Write the Docs guide on writing documentation][writethedocs]; [for Agile projects,
-consider documenting late][agilemodeling] as well.
+looking for information on how to write good documentation take a look at [Write the
+Docs guide on writing documentation][writethedocs]; [for Agile projects, consider
+documenting late][agilemodeling] as well.
 
 ## Why should I bother? And why Sphinx?
 

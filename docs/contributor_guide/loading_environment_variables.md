@@ -1,7 +1,7 @@
 # Loading environment variables
 
 [We use `direnv` to load environment variables][direnv], as it ensures you only have
-project-specific variables loaded _when you are inside the project_, otherwise these
+project-specific variables loaded when you are inside the project, otherwise these
 variables are not loaded. This can prevent accidental conflicts with identically named
 variables.
 
@@ -22,8 +22,7 @@ secrets and credentials](#storing-secrets-and-credentials). Then:
    direnv allow
    ```
 
-You only need to do this **once**, and again each time `.envrc` and `.secrets` are
-modified.
+You only need to do this once, and again each time `.envrc` and `.secrets` are modified.
 
 ### Installing `direnv`
 
@@ -49,8 +48,8 @@ the `direnv` documentation.
 
 ## Storing secrets and credentials
 
-Secrets and credentials must be stored in the `.secrets` file. **This file is not
-version-controlled**, so no secrets should be committed to GitHub.
+Secrets and credentials must be stored in the `.secrets` file. This file is not
+version-controlled, so no secrets should be committed to GitHub.
 
 In your terminal navigate to the root folder, and create a `.secrets` file.
 
@@ -72,7 +71,7 @@ Once complete, make sure the `.secrets` file has the following line uncommented 
 source_env ".secrets"
 ```
 
-This ensures [`direnv`][direnv] loads the `.secrets` file via `.envrc` **without**
+This ensures [`direnv`][direnv] loads the `.secrets` file via `.envrc` without
 version-controlling `.secrets`.
 
 [direnv]: https://direnv.net/
