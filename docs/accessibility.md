@@ -24,22 +24,25 @@ disability.
 
 We know some parts of this website are not fully accessible:
 
-- to be completed after accessibility testing
+- Some pages use layout tables rather than CSS tables.
+- Some links do not clearly explain where they lead, or that they lead to external
+  sites.
+- There are some external links to websites that may not be accessible.
 
 ## Feedback and contact information
 
 If you need information on this website in a different format like accessible PDF,
 large print, easy read, audio recording or braille:
 
-- email [gdsdatascience@digital.cabinet-office.gov.uk][email]
-- raise an issue on our GitHub repository at
-  [https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/issues/new][github-issues]
+- [email gdsdatascience@digital.cabinet-office.gov.uk][email]
+- [raise an issue on our GitHub repository at
+  https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/issues/new][github-issues]
 
 ## Reporting accessibility problems with this website
 
 We're always looking to improve the accessibility of this website. If you find any
 problems not listed on this page or think we're not meeting accessibility requirements,
-contact us by [email][email], or [raise an issue on our Github
+[contact us by email][email], or [raise an issue on our Github
 repository][github-issues].
 
 ## Enforcement procedure
@@ -57,8 +60,8 @@ Accessibility Regulations 2018.
 
 ## Compliance status
 
-This website is not compliant with the [Web Content Accessibility Guidelines version
-2.1][wcag] AA standard. The non-compliances are listed below.
+This website is partially compliant with the [Web Content Accessibility Guidelines
+version 2.1][wcag] AA standard, due to the non-compliances listed below.
 
 ### Non-accessible content
 
@@ -66,33 +69,48 @@ The content listed below is non-accessible for the following reasons.
 
 #### Non-compliance with the accessibility regulations
 
-1. The website has not been tested yet against WCAG 2.1, as the underlying theme is
-   still under development.
+- Some pages use layout tables rather than CSS tables. This fails WCAG 2.1 success
+  criteria 1.3.1 Info and Relationships and 1.3.2 Meaningful Sequence.
+- Some links do not clearly explain where they lead, or that they lead to external
+  sites. This fails WCAG 2.1 success criteria 2.4.4 Link Purpose (In Context) and 2.4.4
+  Link Purpose (In Context).
 
 #### Disproportionate burden
 
-The website has not been tested due to lack of resources, but will be tested as soon as
-possible.
+[The use of layout tables are due to the use of the
+`sphinx.ext.autosummary`][sphinx-autosummary], and [`sphinx.ext.autodoc`
+extensions][sphinx-autodoc]. This is a third-party, open source code base, and so is
+beyond the scope of this project to fix, although we will apply updates as this
+codebase develops.
 
 #### Content that's not within the scope of the accessibility regulations
 
-This section will be completed once WCAG 2.1 testing has also been completed.
+The accessibility regulations [do not require us to fix external, third-party websites
+that are neither funded nor developed by, nor under the control of the Government
+Digital Service][accessibility-legislation].
 
 ## How we tested this website
 
-To be confirmed.
+The test was carried out by the data sicence team at GDS. We used the [WAVE Web
+Accessibility Evaluation Tool][wave] and a checklist created by the GDS technical
+writing team with help from the GDS accessibility team. We tested all pages on this
+site.
 
 ## What we're doing to improve accessibility
 
-We will be undertaking WCAG 2.1 testing as soon as possible.
+We plan to fix the accessibility issues in the content by the end of December 2021.
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 12 June 2021. It was last reviewed on 12 June 2021.
+This statement was prepared on 12 June 2021. It was last reviewed on 15 June 2021.
 
 [abilitynet]: https://mcmw.abilitynet.org.uk/
+[accessibility-legislation]: https://www.legislation.gov.uk/uksi/2018/952/regulation/4/made
 [eass]: https://www.equalityadvisoryservice.com/
 [email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
 [github-issues]: https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/issues/new
 [github-pages]: https://ukgovdatascience.github.io/govuk-tech-docs-sphinx-theme
+[sphinx-autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
+[sphinx-autosummary]: https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
+[wave]: https://wave.webaim.org/
 [wcag]: https://www.w3.org/TR/WCAG21/
