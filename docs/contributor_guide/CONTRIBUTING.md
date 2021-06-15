@@ -1,21 +1,21 @@
 # Contributing
 
 We love contributions! We've compiled this documentation to help you understand our
-contributing guidelines. If you still have questions, please [contact us][email] and
+contributing guidelines. [If you still have questions, please contact us][email] and
 we'd be happy to help!
 
 ## Code of Conduct
 
-Please read [`CODE_OF_CONDUCT.md`][code-of-conduct] before contributing.
+[Please read `CODE_OF_CONDUCT.md` before contributing][code-of-conduct].
 
 ## Getting started
 
 To start contributing, first make sure your system meets these requirements:
 
 1. Python 3.6.1+ installed
-2. [`poetry` installed][poetry-install]
+2. [`poetry` installed; see their documentation for instructions][poetry-install]
 
-Then install the required Python packages, and [pre-commit hooks][pre-commit] using:
+Then install the required Python packages, and Git pre-commit hooks using:
 
 ```shell
 poetry run make dependencies
@@ -25,34 +25,33 @@ It is better to use the above make command, rather than `poetry install` and
 `poetry run pre-commit install`, as the command will ensure your pre-commit hooks are
 up-to-date with any changes made.
 
-The pre-commit hooks are a security feature to ensure no secrets[^1], and large data
-files, are accidentally committed into the repository. For more information about the
-pre-commit hooks used in this repository, see the
-[documentation][docs-pre-commit-hooks].
+The pre-commit hooks are a security feature to ensure, for example, no secrets[^1], and
+large data files, are accidentally committed into the repository. [For more information
+on pre-commit hooks see our documentation][docs-pre-commit-hooks].
 
 [^1]: [Only secrets of specific patterns are detected by the pre-commit
       hooks][docs-pre-commit-hooks-secrets-definition].
 
 ## Code conventions
 
-We mainly follow [The GDS Way][gds-way] in our code conventions.
+[We mainly follow the GDS Way in our code conventions][gds-way].
 
 ### Git and GitHub
 
-We use Git to version control the source code; please read [The GDS Way][gds-way-git]
-for further details, including information about writing good commit messages, using
-`git rebase` for local branches, and `git merge --no-ff` for merges, as well as the
-entry on `git push --force-with-lease` instead of `git push -f`.
+We use Git to version control the source code. [Please read the GDS Way for details on
+Git best practice][gds-way-git], including how to write good commit messages, use
+`git rebase` for local branches and `git merge --no-ff` for merges, as well as using
+`git push --force-with-lease` instead of `git push -f`.
 
-If you want to modify the `.gitignore` files, see the template
-[documentation][docs-updating-gitignore] for further details.
+[If you want to modify the `.gitignore` files, see the template
+documentation][docs-updating-gitignore] for further details.
 
 Our source code is stored on GitHub. Pull requests into `main` require at least one
 approved review.
 
 ### Python
 
-For Python code, we follow [The GDS Way Python style guide][gds-way-python] with a line
+For Python code, [we follow the GDS Way Python style guide][gds-way-python] with a line
 length of 88; the flake8 pre-commit hook should help with this!
 
 ### Markdown
@@ -72,7 +71,7 @@ strictly enforced in all cases, for example with long hyperlinks.
 
 ## Testing
 
-Tests are written using the [pytest][pytest] framework, with its configuration in the
+[Tests are written using the `pytest` framework][pytest], with its configuration in the
 `pyproject.toml` file. Note, only tests in the `tests` folder are executed. To run the
 tests, execute the following command in your terminal:
 
@@ -82,9 +81,9 @@ pytest
 
 ### Code coverage
 
-Code coverage of Python scripts is measured using the [`coverage`][coverage] Python
-package; its configuration can be found in `pyproject.toml`. Note coverage only extends
-to Python scripts in the `govuk_tech_docs_sphinx_theme` folder.
+[Code coverage of Python scripts is measured using the `coverage` Python
+package][coverage]; its configuration can be found in `pyproject.toml`. Note coverage
+only extends to Python scripts in the `govuk_tech_docs_sphinx_theme` folder.
 
 To run code coverage, and view it as an HTML report, execute the following command in
 your terminal:
@@ -97,7 +96,7 @@ The HTML report can be accessed at `htmlcov/index.html`.
 
 ## Documentation
 
-We write our documentation in [MyST Markdown][myst] for use in Sphinx. This is mainly
+[We write our documentation in MyST Markdown for use in Sphinx][myst]. This is mainly
 stored in the `docs` folder, unless it's more appropriate to store it elsewhere, like
 this file.
 
@@ -116,5 +115,4 @@ documentation][docs-write-sphinx-documentation], and build it into a searchable 
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
 [myst]: https://myst-parser.readthedocs.io/
 [poetry-install]: https://python-poetry.org/docs/
-[pre-commit]: https://pre-commit.com/
 [pytest]: https://docs.pytest.org/

@@ -39,8 +39,8 @@ large print, easy read, audio recording or braille:
 
 We're always looking to improve the accessibility of this website. If you find any
 problems not listed on this page or think we're not meeting accessibility requirements,
-contact us via [email][email], or [raise an issue][github-issues] on our Github
-repository.
+contact us via [email][email], or [raise an issue on our Github
+repository][github-issues].
 
 ## Enforcement procedure
 
@@ -57,9 +57,8 @@ Accessibility Regulations 2018.
 
 ## Compliance status
 
-This website is not compliant with the
-[Web Content Accessibility Guidelines version 2.1][wcag] AA standard. The
-non-compliances are listed below.
+This website is not compliant with the [Web Content Accessibility Guidelines version
+2.1][wcag] AA standard. The non-compliances are listed below.
 
 ### Non-accessible content
 

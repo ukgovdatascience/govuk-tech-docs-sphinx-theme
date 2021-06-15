@@ -16,8 +16,8 @@ can use this for your own Sphinx documentation by following the steps below.
 
 ### Install the package
 
-The latest released version can be installed from the
-[Python Package Index (PyPI)][pypi]:
+The latest released version can be installed from the [Python Package Index
+(PyPI)][pypi]:
 
 ```shell
 pip install govuk-tech-docs-sphinx-theme
@@ -68,13 +68,13 @@ To use this Sphinx theme, modify your Sphinx `conf.py` configuration file as fol
    }
    ```
 
-Note, note all Sphinx configuration settings are currently supported by this theme -
-feel free to [contribute](#contributing)!
+Note, not all Sphinx configuration settings are currently supported by this theme -
+[feel free to contribute to support other settings](#contributing)!
 
 ### Add an accessibility statement
 
-All public sector bodies have to meet the
-[2018 accessibility regulations][govuk-accessibility] unless exempt.
+All public sector bodies have to meet the [2018 accessibility
+regulations][govuk-accessibility] unless exempt.
 
 To add an accessibility statement, create a blank Markdown file in the root of your
 Sphinx folder called `accessibility.md`; this is the same location as your Sphinx
@@ -87,8 +87,8 @@ orphan: true
 # Accessibility statement
 ```
 
-followed by your accesibility statement; guidance on how to write one can be found on
-[GOV.UK][govuk-example-accessibility].
+followed by your accesibility statement; [guidance on how to write an accessibility
+statement can be found on GOV.UK][govuk-example-accessibility].
 
 Next, in your Sphinx `conf.py` file, check that the `html_context` variable has this
 file referenced, i.e.:
@@ -104,38 +104,37 @@ html_context = {
 ### Apply the theme's components
 
 This theme should be compatible with most ReStructuredText syntax, and also includes
-some [GOV.UK Design System][govuk-design] components. See the
-[example components][docs-example-components-rest] page for further details.
+[components from the GOV.UK Design System][govuk-design]. [See the example
+components page for further details][docs-example-components-rest].
 
-If you are using [MyST-Parser][myst] to build Sphinx documentation using Markdown, see
+[If you are using MyST to build Sphinx documentation using Markdown][myst], see
 the [equivalent Markdown components page][docs-example-components-md].
 
 ## Troubleshooting
 
-If you have difficulties with this theme, please raise an [issue][repository-issues] or
-[contact us][email].
+If you have difficulties with this theme, [please raise an issue][repository-issues] or
+[contact us to report a problem][email].
 
 ## Licence
 
 Unless stated otherwise, the codebase is released under the MIT License. This covers
-both the codebase and any sample code in the documentation. Additional third-party
-component licences are stated in the [`LICENSE`][license] file. The documentation is
+both the codebase and any sample code in the documentation. [Additional third-party
+component licences are stated in the `LICENSE`][license] file. The documentation is
 © Crown copyright and available under the terms of the Open Government 3.0 licence.
 
 ## Contributing
 
-If you want to help us build, and improve `govuk-tech-docs-sphinx-theme`, view our
-[contributing guidelines][contributing].
+[If you want to help us build, and improve `govuk-tech-docs-sphinx-theme`, view our
+contributing guidelines][contributing].
 
 ## Acknowledgements
 
-This project structure is based on the [`govcookiecutter`][govcookiecutter] template
-project.
+[This project structure is based on the `govcookiecutter` template
+project][govcookiecutter].
 
 [contributing]: ./docs/contributor_guide/CONTRIBUTING.md
 [docs-example-components-md]: ./docs/example_components/markdown.md
 [docs-example-components-rest]: ./docs/example_components/restructuredtext.rst
-[docs-loading-environment-variables]: docs/contributor_guide/loading_environment_variables.md
 [email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
 [govuk-accessibility]: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps
@@ -143,8 +142,6 @@ project.
 [govuk-example-accessibility]: https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website
 [license]: https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/blob/main/LICENSE
 [myst]: https://myst-parser.readthedocs.io/en/latest/
-[pre-commit]: https://pre-commit.com/
 [pypi]: https://pypi.org/project/govuk-tech-docs-sphinx-theme/
 [repository]: https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme
 [repository-issues]: https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/issues/new
-[sphinx-quickstart]: https://www.sphinx-doc.org/en/master/usage/quickstart.html#setting-up-the-documentation-sources

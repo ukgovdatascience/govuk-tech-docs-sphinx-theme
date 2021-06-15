@@ -2,8 +2,8 @@
 
 Here is an example page containing the components of designed into this Sphinx theme.
 This text is part of the first header, but you should only use the first header once
-per page! All text on this page is written in Markdown, and rendered by the
-[`myst-parser`][myst] package.
+per page! [All text on this page is written in Markdown, and rendered by the
+`myst-parser` package (MyST)][myst].
 
 You should see me in the sidebar in the `On this page` section.
 
@@ -34,9 +34,9 @@ Here is some text under Heading 6. You should see me in the sidebar in the
 
 ## Adding mathematics
 
-To render mathematics in Sphinx, you need to have the
-[Sphinx MathJax extension enabled][sphinx-mathjax]. There are two allowed formats;
-[dollar](#dollar-syntax), and [amsmath](#amsmath-syntax).
+[To render mathematics in Sphinx, you need to have the Sphinx MathJax extension
+enabled][sphinx-mathjax]. There are two allowed formats; [dollar](#dollar-syntax), and
+[amsmath](#amsmath-syntax).
 
 ### Dollar syntax
 
@@ -74,8 +74,8 @@ This is the equation for mass-energy equivalence {eq}`eqn:example`.
 
 ### `amsmath` syntax
 
-This example is taken directly from the [documentation][myst-amsmath] for MyST. If you
-write the following block of [`amsmath` syntax][amsmath]:
+[This example is taken directly from the documentation for MyST][myst-amsmath]. If you
+write the following block of `amsmath`:
 
 ```
 \begin{gather*}
@@ -166,8 +166,8 @@ so:
 :width: 200px
 ```
 
-Note this ReST syntax will not render in Markdown viewers such as GitHub - use
-[HTML](#html) instead.
+Note this [ReST syntax will not render in Markdown viewers such as GitHub - use
+HTML](#html) instead.
 
 ### HTML
 
@@ -184,8 +184,8 @@ so:
 
 ## GOV.UK Design System components
 
-Some of the [GOV.UK Design System components][govuk-design-components] are incorporated
-into this theme.
+[Some GOV.UK Design System components are incorporated into this
+theme][govuk-design-components].
 
 ### Notification banner
 

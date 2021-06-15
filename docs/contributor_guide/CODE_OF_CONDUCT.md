@@ -6,9 +6,8 @@ are also expected to follow the Civil Service Code.
 
 ## Civil Service Code
 
-Contributors working within Her Majesty's Government must review the
-[Civil Service Code][civil-service-code], and are expected to follow it in their
-contributions.
+Contributors working within Her Majesty's Government must review the [Civil Service
+Code][civil-service-code], and are expected to follow it in their contributions.
 
 ## Contributor Covenant Code of Conduct
 

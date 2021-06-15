@@ -1,10 +1,10 @@
 # Development of the `govuk-tech-docs-sphinx-theme`
 
-This theme was designed to complement [`govcookiecutter`][govcookiecutter] to provide a
-standardised [GOV.UK Tech Docs][govuk-tech-docs]-style theme that leverages the power
-of [Sphinx][sphinx]. This enables users to build and deploy documentation as a
-searchable website, whether that is locally on their machine or elsewhere, such as on
-GitHub Pages.
+[This theme was designed to complement `govcookiecutter`][govcookiecutter] to provide a
+standardised [GOV.UK Tech Docs-style theme][govuk-tech-docs] that leverages the power
+of [Sphinx, a Python document generator][sphinx]. This enables users to build and
+deploy documentation as a searchable website, whether that is locally on their machine
+or elsewhere, such as on GitHub Pages.
 
 ```{note} This theme is not an exact replica of GOV.UK Tech Docs template!
 
@@ -12,8 +12,8 @@ As bugs/discrepancies are discovered, the theme will be improved and updated - w
 "TDD"-ing to completeness.
 
 In this case, most of the testing is done by visual inspection of the built theme,
-rather than formal test scripts. Use the
-[example component pages][docs-example-components] to help!
+rather than formal test scripts; [use the example component pages to help with
+testing!][docs-example-components]
 
 This theme is based on commit [`1fb26fc`][current-version] of the
 [GOV.UK Tech Docs template][govuk-tech-docs].
@@ -25,21 +25,22 @@ it out into an acceptable Sphinx layout, and applying Sphinx blocks into the
 appropriate areas of the HTML. By default, the template CSS and JavaScript files
 supersede the inbuilt Sphinx ones, aside from a few cases (e.g. search).
 
-If you discover any bugs, and/or discrepancies, please raise a GitHub [issue][issue] on
-our repository (check out our [contributing guidelines][contributing], and
+If you discover any bugs, and/or discrepancies, [please raise a GitHub issue][issue] on
+our repository ([check out our contributing guidelines][contributing], and
 [code of conduct][code-of-conduct] first).
 
 If you also want to contribute to the solution, please do raise a pull request too! The
-following sections will hopefully assist with fixing any bugs. Consider reading the
-Sphinx documentation on [templating][sphinx-templating], and using [Jinja][jinja]. For
-new or existing [GOV.UK Design System][govuk-design-system] components, read the
-[Sphinx extension development][sphinx-extension] documentation.
+following sections will hopefully assist with fixing any bugs. Consider [reading the
+Sphinx documentation on templating][sphinx-templating], and [documentation on using
+Jinja templating][jinja]. For new or existing
+[GOV.UK Design System components][govuk-design-system], [read the Sphinx extension
+development documentation][sphinx-extension].
 
 ## Comparing with GOV.UK Tech Docs template
 
-The theme was built by from a [specific version][current-version] of the GOV.UK Tech
-Docs template, and amending all HTML files to use relative paths for all assets (CSS,
-JavaScript, images, etc.).
+[The theme was built by from a specific version of the GOV.UK Tech Docs
+template][current-version], and amending all HTML files to use relative paths for all
+assets (CSS, JavaScript, images, etc.).
 
 This repository contains an automated way to get the **latest** version of the
 template, and amend the paths on a Unix-based machine:
@@ -49,17 +50,16 @@ template, and amend the paths on a Unix-based machine:
 Given the amount of changes, this process is more for comparison purposes to improve
 the theme, rather than rebuilding it from scratch.
 
-For example, breaking changes between the template and the theme include updating the
-vendor JavaScript files (see commit [`f78f0d7`][commit-update-js]), and the use of
-Sphinx's search engine.
+For example, breaking changes between the template and the theme include [updating the
+vendor JavaScript files][commit-update-js], and the use of Sphinx's search engine.
 
-You can also use the [GOV.UK Developer Docs][govuk-dev-docs] or [The GDS Way][gds-way]
+You can also use the [GOV.UK Developer Docs][govuk-dev-docs] or [the GDS Way][gds-way]
 for comparison, although they are both slightly different to the template.
 
 ```
 
-1. Install [./jq](https://stedolan.github.io/jq/)
-2. Install the requirements for the [GOV.UK Tech Docs template][govuk-tech-docs], but
+1. [Install ./jq][jq]
+2. [Install the requirements for the GOV.UK Tech Docs template][govuk-tech-docs], but
    stop before creating a new project
 3. Open your terminal at the root of this repository, and execute the
    `build_alphagov_tech_docs_template.sh` shell script
@@ -96,9 +96,9 @@ As Sphinx blocks were injected directly into the built GOV.UK Tech Docs template
 Sphinx will sometimes inject more HTML tags and classes. This can then break any styles
 that a conditional, say on the order of tags and/or classes.
 
-If you identify a situation where this occurs,
-[find out what the affected style should look like](#comparing-with-govuk-tech-docs-template).
-Open `src/govuk_tech_docs_sphinx_theme/static/stylesheets/manifest.css`, and find the
+If you identify a situation where this occurs, [find out what the affected style should
+look like](#comparing-with-govuk-tech-docs-template). Open
+`src/govuk_tech_docs_sphinx_theme/static/stylesheets/manifest.css`, and find the
 incorrectly applied style. Identify the problem, then copy the relevant styles from
 `mainfest.css` to `src/govuk_tech_docs_sphinx_theme/static/stylesheets/theme.css`,
 making the relevant changes to apply the style to the theme.
@@ -145,9 +145,9 @@ not been reproduced here for brevity.
 
 ## GOV.UK Design System components
 
-Some, but not all, [GOV.UK Design System][govuk-design-system] components have been
-included in this theme. To add additional ones, read the Sphinx documentation on
-[extensions][sphinx-extension], and take a look at the existing ones in the
+Some, but not all, GOV.UK Design System components have been included in this theme. To
+add additional ones, [read the Sphinx documentation on extensions][sphinx-extension],
+and take a look at the existing ones in the
 `src/govuk_tech_docs_sphinx_theme/components` folder.
 
 Note new components must be added as directives in the `setup` function of

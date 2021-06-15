@@ -42,9 +42,9 @@ Here is some text under Heading 6. You should see me in the sidebar in the
 Adding mathematics
 ==================
 
-To render mathematics in Sphinx, you need to have the
-`Sphinx MathJax extension enabled <mathjax_>`_. This example is taken directly from the
-`documentation <myst_>`_ for MyST. If you write the following block of |amsmath|_: ::
+`To render mathematics in Sphinx, you need to have the Sphinx MathJax extension
+enabled <mathjax_>`_. `This example is taken directly from the documentation <myst_>`_
+for MyST. If you write the following block of |amsmath|_: ::
 
     .. math::
         :label: eqn_a
@@ -129,8 +129,8 @@ like so:
 GOV.UK Design System components
 ===============================
 
-Some of the `GOV.UK Design System components <govuk-design-components_>`_ are
-incorporated into this theme.
+`Some of the GOV.UK Design System components are incorporated into this
+theme <govuk-design-components_>`_ .
 
 Notification banner
 -------------------

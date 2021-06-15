@@ -1,7 +1,7 @@
 # Pre-commit hooks
 
-This repository uses the Python package [`pre-commit`][pre-commit] to manage
-pre-commit hooks. Pre-commit hooks are actions which are run automatically, typically
+[This repository uses the Python package `pre-commit` to manage pre-commit
+hooks][pre-commit]. Pre-commit hooks are actions which are run automatically, typically
 on each commit, to perform some common set of tasks. For example, a pre-commit hook
 might be used to run any code linting automatically, providing any warnings before code
 is committed, ensuring that all of our code adheres to a certain quality standard.
@@ -39,11 +39,10 @@ information](#definition-of-a-secret-according-to-detect-secrets).
 
 ```
 
-We use [`detect-secrets`][detect-secrets] to check that no
-[secrets](#definition-of-a-secret-according-to-detect-secrets), are accidentally
-committed. This hook requires you to generate a baseline file if one is not already
-present within the root directory. To create the baseline file, run the following at
-the root of the repository:
+[We use `detect-secrets` to check that no secrets are accidentally
+committed][detect-secrets]. This hook requires you to generate a baseline file if one
+is not already present within the root directory. To create the baseline file, run the
+following at the root of the repository:
 
 ```shell
 poetry run detect-secrets scan > .secrets.baseline
@@ -73,11 +72,11 @@ that **looks like a secret according to one or more of these regular expression
 patterns**. By definition, there are only a limited number of patterns, so the
 `detect-secrets` package cannot detect every conceivable type of secret.
 
-To understand what types of secrets will be detected, read the
-[caveats][detect-secrets-caveats], and the list of
-[supported plugins][detect-secrets-plugins] that the package uses. Also, you should use
-secret variable names that contain words that will trip the KeywordDetector plugin; see
-the [`DENYLIST` variable for the full list of words][detect-secrets-keyword-detector].
+To understand what types of secrets will be detected, [read the `detect-secrets`
+documentation on caveats][detect-secrets-caveats], and the [list of supported plugins
+that the `detect-secrets` uses][detect-secrets-plugins]. Also, you should use secret
+variable names that contain words that will trip the KeywordDetector plugin; see the
+[`DENYLIST` variable for the full list of words][detect-secrets-keyword-detector].
 
 ### If `pre-commit` detects secrets during commit
 
@@ -86,8 +85,11 @@ what it found and where to go to check the secret.
 
 If the detected secret is a false positive, there are two options to resolve this, and
 prevent your commit from being blocked:
-[inline allowlisting (recommended)](#inline-allowlisting-recommended) or
-[updating `.secrets.baseline`](#updating-secretsbaseline).
+
+- [inline allowlisting of false positives
+  (recommended)](#inline-allowlisting-recommended); or
+- [updating the `.secrets.baseline` to include the false
+  positives](#updating-secretsbaseline).
 
 In either case, if an actual secret is detected (or a combination of actual secrets and
 false positives), first remove the actual secret before following either of these
@@ -116,9 +118,9 @@ actual secrets first before adding `pragma` comments to the false positives.
 
 #### Updating `.secrets.baseline`
 
-To exclude a false positive, you can also update the `.secrets.baseline` by repeating
-the same two commands as in the
-[initial setup](#using-the-detect-secrets-pre-commit-hook).
+To exclude a false positive, you can also [update the `.secrets.baseline` by repeating
+the same two commands as in the initial
+setup](#using-the-detect-secrets-pre-commit-hook).
 
 During auditing, if the detected secret is actually a secret (or other sensitive
 information), remove the secret and re-commit. There is no need to update the

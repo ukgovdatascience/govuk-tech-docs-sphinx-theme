@@ -1,15 +1,15 @@
 # Loading environment variables
 
-We use [`direnv`][direnv] to load environment variables, as it ensures you only have
+[We use `direnv` to load environment variables][direnv], as it ensures you only have
 project-specific variables loaded _when you are inside the project_, otherwise these
 variables are not loaded. This can prevent accidental conflicts with identically named
 variables.
 
 ## Using `direnv`
 
-To load the environment variables, first [install `direnv`](#installing-direnv), and
-make sure you have a `.secrets` file to
-[store secrets and credentials](#storing-secrets-and-credentials). Then:
+To load the environment variables, first [follow the `direnv` installation
+instructions](#installing-direnv), and [make sure you have a `.secrets` file to store
+secrets and credentials](#storing-secrets-and-credentials). Then:
 
 1. Open your terminal;
 2. Navigate to the project folder; and
@@ -32,7 +32,7 @@ a bash terminal. For other ways of installing `direnv`, and its shell hooks, con
 the `direnv` documentation.
 
 1. Open your terminal;
-2. Install `direnv` via [Homebrew][homebrew];
+2. [Install `direnv` via Homebrew][homebrew];
    ```shell
    brew install direnv
    ```
