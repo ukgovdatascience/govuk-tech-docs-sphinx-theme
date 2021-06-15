@@ -131,8 +131,9 @@ system.
 <!-- TODO: Add captions to figures -->
 
 To include images, you can use either Markdown, reStructuredText (ReST), or pure HTML.
-We have a GOV.UK logo image at `../_static/images/govuk-logo.png` that we will use in
-all the following examples.
+We have a GOV.UK logo image at `../_static/images/govuk-logo.png`, and a duplicate
+image at `../_static/images/govuk-logo-duplicate.png` that we will use in all the
+following examples; the duplicate image helps this website meet accessibility standards.
 
 ### Markdown
 
@@ -175,13 +176,13 @@ HTML](#html) instead.
 To include the image in HTML, add the following text:
 
 ```html
-<img src="../_static/images/govuk-logo.png" alt="GOV.UK logo" width="200px">
+<img src="../_static/images/govuk-logo-duplicate.png" alt="GOV.UK logo - duplicate" width="200px">
 ```
 
 to include the image with the alt text `GOV.UK logo` at a set width of 200 pixels, like
 so:
 
-<img src="../_static/images/govuk-logo.png" alt="GOV.UK logo" width="200px">
+<img src="../_static/images/govuk-logo-duplicate.png" alt="GOV.UK logo - duplicate" width="200px">
 
 ## GOV.UK Design System components
 
