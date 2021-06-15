@@ -73,6 +73,21 @@ Note, not all Sphinx configuration settings are currently supported by this them
 
 ### Add an accessibility statement
 
+````{note} Accessibility issues with Sphinx autodoc extension
+
+With the Sphinx autodoc extension, you may find headers do not fit the content that
+follows. This [fails the WCAG 2.1 success criterion 2.4.6 Headings and
+Labels][wcag-2.1-2.4.6].
+
+To resolve this, copy the entire `docs/_template` folder from this repository into
+your Sphinx folder, and ensure your `conf.py` file contains:
+
+```python
+templates_path = ["_templates"]
+```
+
+````
+
 All public sector bodies have to meet the [2018 accessibility
 regulations][govuk-accessibility] unless exempt.
 
@@ -145,3 +160,4 @@ project][govcookiecutter].
 [pypi]: https://pypi.org/project/govuk-tech-docs-sphinx-theme/
 [repository]: https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme
 [repository-issues]: https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/issues/new
+[wcag-2.1-2.4.6]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html
