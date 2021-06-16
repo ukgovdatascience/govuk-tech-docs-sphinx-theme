@@ -24,19 +24,19 @@ disability.
 
 We know some parts of this website are not fully accessible:
 
-- Some pages use layout tables rather than CSS tables.
-- Some links do not clearly explain where they lead, or that they lead to external
+- some pages use layout tables rather than CSS tables.
+- some links do not clearly explain where they lead, or that they lead to external
   sites.
-- There are some external links to websites that may not be accessible.
+- there are some external links to websites that may not be accessible.
 
 ## Feedback and contact information
 
 If you need information on this website in a different format like accessible PDF,
 large print, easy read, audio recording or braille:
 
-- [email gdsdatascience@digital.cabinet-office.gov.uk][email]
-- [raise an issue on our GitHub repository at
-  https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/issues/new][github-issues]
+- email [gdsdatascience@digital.cabinet-office.gov.uk][email]
+- raise an issue on the [`govuk-tech-docs-sphinx-theme` GitHub
+  repository][github-issues]
 
 ## Reporting accessibility problems with this website
 
@@ -69,11 +69,12 @@ The content listed below is non-accessible for the following reasons.
 
 #### Non-compliance with the accessibility regulations
 
-- Some pages use layout tables rather than CSS tables. This fails WCAG 2.1 success
-  criteria 1.3.1 Info and Relationships and 1.3.2 Meaningful Sequence.
+- Some pages use layout tables rather than CSS tables. This fails [WCAG 2.1 success
+  criteria 1.3.1 Info and Relationships][wcag-2.1-1.3.1] and [1.3.2 Meaningful
+  Sequence][wcag-2.1-1.3.2].
 - Some links do not clearly explain where they lead, or that they lead to external
-  sites. This fails WCAG 2.1 success criteria 2.4.4 Link Purpose (In Context) and 2.4.4
-  Link Purpose (In Context).
+  sites. This fails [WCAG 2.1 success criteria 2.4.4 Link Purpose (In
+  Context)][wcag-2.1-2.4.4].
 
 #### Disproportionate burden
 
@@ -85,9 +86,10 @@ codebase develops.
 
 #### Content that's not within the scope of the accessibility regulations
 
-The accessibility regulations [do not require us to fix external, third-party websites
-that are neither funded nor developed by, nor under the control of the Government
-Digital Service][accessibility-legislation].
+The [Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility
+Regulations 2018 legislation][accessibility-legislation] does not require us to fix
+external, third-party websites that are neither funded nor developed by, nor under the
+control of the Government Digital Service (GDS).
 
 ## How we tested this website
 
@@ -114,3 +116,6 @@ This statement was prepared on 12 June 2021. It was last reviewed on 15 June 202
 [sphinx-autosummary]: https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
 [wave]: https://wave.webaim.org/
 [wcag]: https://www.w3.org/TR/WCAG21/
+[wcag-2.1-1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html
+[wcag-2.1-1.3.2]: https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html
+[wcag-2.1-2.4.4]: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
