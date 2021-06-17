@@ -35,4 +35,4 @@ repos:
       - id: detect-secrets
         name: detect-secrets - Detect secrets in staged code
         args: [ "--baseline", ".secrets.baseline" ]
-        exclude: .*/tests/.*
+        exclude: .*/tests/.*|^poetry\.lock$
