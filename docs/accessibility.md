@@ -34,7 +34,7 @@ We know some parts of this website are not fully accessible:
 If you need information on this website in a different format like accessible PDF,
 large print, easy read, audio recording or braille:
 
-- email [gdsdatascience@digital.cabinet-office.gov.uk][email]
+- email [gds-data-science@digital.cabinet-office.gov.uk][email]
 - raise an issue on the [`govuk-tech-docs-sphinx-theme` GitHub
   repository][github-issues]
 
@@ -109,7 +109,7 @@ This statement was prepared on 12 June 2021. It was last reviewed on 15 June 202
 [abilitynet]: https://mcmw.abilitynet.org.uk/
 [accessibility-legislation]: https://www.legislation.gov.uk/uksi/2018/952/regulation/4/made
 [eass]: https://www.equalityadvisoryservice.com/
-[email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
+[email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
 [github-issues]: https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/issues/new
 [github-pages]: https://ukgovdatascience.github.io/govuk-tech-docs-sphinx-theme
 [sphinx-autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html

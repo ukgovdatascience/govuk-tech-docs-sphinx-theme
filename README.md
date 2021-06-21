@@ -150,7 +150,7 @@ project][govcookiecutter].
 [contributing]: ./docs/contributor_guide/CONTRIBUTING.md
 [docs-example-components-md]: ./docs/example_components/markdown.md
 [docs-example-components-rest]: ./docs/example_components/restructuredtext.rst
-[email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
+[email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
 [govuk-accessibility]: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps
 [govuk-design]: https://design-system.service.gov.uk/

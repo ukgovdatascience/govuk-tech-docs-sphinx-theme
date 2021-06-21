@@ -3,7 +3,7 @@
 name = "govuk-tech-docs-sphinx-theme"
 version = "1.0.0"
 description = "A Sphinx theme to replicate the GOV.UK Tech Docs Template."
-authors = ["ukgovdatascience <gdsdatascience@digital.cabinet-office.gov.uk>"]
+authors = ["ukgovdatascience <gds-data-science@digital.cabinet-office.gov.uk>"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme"
