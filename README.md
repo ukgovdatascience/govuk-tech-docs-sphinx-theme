@@ -23,22 +23,6 @@ The latest released version can be installed from the [Python Package Index
 pip install govuk-tech-docs-sphinx-theme
 ```
 
-Alternatively, you can install the bleeding edge version directly from this repository
-using https or ssh:
-
-```shell
-pip install -e git+https://git@github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme#egg=govuk_tech_docs_sphinx_theme
-pip install -e git+ssh://git@github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme#egg=govuk_tech_docs_sphinx_theme
-```
-
-or a specific branch, say `example-branch` like so:
-
-```shell
-pip install -e git+https://git@github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme.git@example-branch#egg=govuk_tech_docs_sphinx_theme
-pip install -e git+ssh://git@github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme.git@example-branch#egg=govuk_tech_docs_sphinx_theme
-```
-
-
 ### Amend your Sphinx `conf.py` configuration file
 
 To use this Sphinx theme, modify your Sphinx `conf.py` configuration file as follows:
