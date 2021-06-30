@@ -1,0 +1,6 @@
+﻿``govuk_tech_docs_sphinx_theme.setup``
+======================================
+
+.. currentmodule:: govuk_tech_docs_sphinx_theme
+
+.. autofunction:: setup

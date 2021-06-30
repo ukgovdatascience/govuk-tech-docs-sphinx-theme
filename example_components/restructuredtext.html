@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Example components - reStructuredText - GDS GOV.UK Tech Docs Sphinx Theme</title>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/javascripts/_analytics.js"></script>
+    <script src="../_static/javascripts/_govuk/govuk-frontend-3.10.2.min.js"></script>
+    <script src="../_static/javascripts/_govuk/modules.js"></script>
+    <script src="../_static/javascripts/_modules/anchored-headings.js"></script>
+    <script src="../_static/javascripts/_modules/collapsible-navigation.js"></script>
+    <script src="../_static/javascripts/_modules/in-page-navigation.js"></script>
+    <script src="../_static/javascripts/_modules/navigation.js"></script>
+    <script src="../_static/javascripts/_modules/page-expiry.js"></script>
+    <script src="../_static/javascripts/_modules/table-of-contents.js"></script>
+    <script src="../_static/javascripts/_start_modules.js"></script>
+    <script src="../_static/javascripts/_vendor/fixedsticky.js"></script>
+    <script src="../_static/javascripts/_vendor/lodash.js"></script>
+    <script src="../_static/javascripts/_vendor/modernizer.js"></script>
+    <script src="../_static/javascripts/govuk_tech_docs.js"></script>
+    <script src="../_static/javascripts/theme.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math"}}</script>
+    <link href="../_static/stylesheets/manifest.css" rel="stylesheet" />
+    <link href="../_static/stylesheets/theme.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../_static//favicon.ico"/>
+  </head>
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+          <div class="govuk-header__container govuk-header__container--full-width">
+
+            <div class="govuk-header__logo">
+  <a href="../index.html" class="govuk-header__link govuk-header__link--homepage">
+    <span class="govuk-header__logotype">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-header__logotype-crown"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 132 97"
+        height="30"
+        width="36"
+        >
+        <path
+          fill="currentColor" fill-rule="evenodd"
+          d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+          ></path>
+        <image src="../_static/assets/govuk/assets/images/govuk-logotype-crown.png" xlink:href="" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></image>
+      </svg>
+      
+      <span class="govuk-header__logotype-text">GDS</span>
+    </span>
+    <span class="govuk-header__product-name">GOV.UK Tech Docs Sphinx Theme</span>
+  </a><strong class="govuk-tag">Alpha</strong></div>
+            <div class="govuk-header__content" role="navigation">
+  <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+  <nav>
+    <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+      <li class="govuk-header__navigation-item">
+        <a class="govuk-header__link" href="https://www.github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme">GitHub</a>
+        </li>
+    </ul>
+  </nav>
+</div>
+
+          </div>
+        </header>
+      </div>
+      <div id="toc-heading" class="toc-show fixedsticky">
+        <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+        Table of contents <span class="toc-show__icon"></span>
+        </a>
+      </div>
+      <div class="app-pane__body" data-module="in-page-navigation">
+
+        <div class="app-pane__toc" role="navigation">
+  <div class="toc" data-module="table-of-contents">
+    <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+
+    <div class="search" data-module="search">
+  <form action="../search.html" method="get" role="search">
+    <label class="govuk-label search__label" for="search">Search</label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+</div>
+
+    <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+
+      
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">GOV.UK Tech Docs Sphinx Theme</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="README.html">Example components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="markdown.html">Example components - Markdown</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Example components - reStructuredText</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor_guide/README.html">Contributing guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../structure/README.html"><code class="docutils literal notranslate"><span class="pre">govuk-tech-docs-sphinx-theme</span></code> structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/README.html">Theme API reference</a></li>
+</ul>
+
+      <hr size="1">
+
+      
+      <h1>On this page</h1>
+      <ul>
+<li><a class="reference internal" href="#">Example components - reStructuredText</a><ul>
+<li><a class="reference internal" href="#heading-2">Heading 2</a><ul>
+<li><a class="reference internal" href="#heading-3">Heading 3</a><ul>
+<li><a class="reference internal" href="#heading-4">Heading 4</a><ul>
+<li><a class="reference internal" href="#heading-5">Heading 5</a><ul>
+<li><a class="reference internal" href="#heading-6">Heading 6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#adding-mathematics">Adding mathematics</a></li>
+<li><a class="reference internal" href="#adding-tables">Adding tables</a></li>
+<li><a class="reference internal" href="#including-images">Including images</a></li>
+<li><a class="reference internal" href="#gov-uk-design-system-components">GOV.UK Design System components</a><ul>
+<li><a class="reference internal" href="#notification-banner">Notification banner</a></li>
+<li><a class="reference internal" href="#warning">Warning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+    </nav>
+  </div>
+</div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings" role="main">
+
+            
+  <section id="example-components-restructuredtext">
+<h1>Example components - reStructuredText<a class="headerlink" href="#example-components-restructuredtext" title="Permalink to this headline">¶</a></h1>
+<p>Here is an example page containing the components of designed into this Sphinx theme.
+This text is part of the first header, but you should only use the first header once
+per page! All text on this page is written in reStructuredText (ReST).</p>
+<p>You should see me in the sidebar in the <code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">this</span> <span class="pre">page</span></code> section.</p>
+<section id="heading-2">
+<h2>Heading 2<a class="headerlink" href="#heading-2" title="Permalink to this headline">¶</a></h2>
+<p>Here is some text under Heading 2. You should see me in the sidebar in the
+<code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">this</span> <span class="pre">page</span></code> section.</p>
+<section id="heading-3">
+<h3>Heading 3<a class="headerlink" href="#heading-3" title="Permalink to this headline">¶</a></h3>
+<p>Here is some text under Heading 3. You should see me in the sidebar in the
+<code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">this</span> <span class="pre">page</span></code> section.</p>
+<section id="heading-4">
+<h4>Heading 4<a class="headerlink" href="#heading-4" title="Permalink to this headline">¶</a></h4>
+<p>Here is some text under Heading 4. You should see me in the sidebar in the
+<code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">this</span> <span class="pre">page</span></code> section.</p>
+<section id="heading-5">
+<h5>Heading 5<a class="headerlink" href="#heading-5" title="Permalink to this headline">¶</a></h5>
+<p>Here is some text under Heading 5. You should see me in the sidebar in the
+<code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">this</span> <span class="pre">page</span></code> section.</p>
+<section id="heading-6">
+<h6>Heading 6<a class="headerlink" href="#heading-6" title="Permalink to this headline">¶</a></h6>
+<p>Here is some text under Heading 6. You should see me in the sidebar in the
+<code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">this</span> <span class="pre">page</span></code> section.</p>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section id="adding-mathematics">
+<h2>Adding mathematics<a class="headerlink" href="#adding-mathematics" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.mathjax">To render mathematics in Sphinx, you need to have the Sphinx MathJax extension
+enabled</a>. <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html#syntax-amsmath">This example is taken directly from the documentation</a>
+for MyST. If you write the following block of <a class="reference external" href="https://ctan.org/pkg/amsmath"><code class="docutils literal notranslate"><span class="pre">amsmath</span></code> syntax</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">math</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">label</span><span class="p">:</span> <span class="n">eqn_a</span>
+
+    \<span class="n">begin</span><span class="p">{</span><span class="n">gather</span><span class="o">*</span><span class="p">}</span>
+    <span class="n">a_1</span><span class="o">=</span><span class="n">b_1</span><span class="o">+</span><span class="n">c_1</span>\\
+    <span class="n">a_2</span><span class="o">=</span><span class="n">b_2</span><span class="o">+</span><span class="n">c_2</span><span class="o">-</span><span class="n">d_2</span><span class="o">+</span><span class="n">e_2</span>
+    \<span class="n">end</span><span class="p">{</span><span class="n">gather</span><span class="o">*</span><span class="p">}</span>
+
+<span class="o">..</span> <span class="n">math</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">label</span><span class="p">:</span> <span class="n">eqn_b</span>
+
+    \<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="p">}</span>
+    <span class="n">a_</span><span class="p">{</span><span class="mi">11</span><span class="p">}</span><span class="o">&amp;</span> <span class="o">=</span><span class="n">b_</span><span class="p">{</span><span class="mi">11</span><span class="p">}</span><span class="o">&amp;</span>
+    <span class="n">a_</span><span class="p">{</span><span class="mi">12</span><span class="p">}</span><span class="o">&amp;</span> <span class="o">=</span><span class="n">b_</span><span class="p">{</span><span class="mi">12</span><span class="p">}</span>\\
+    <span class="n">a_</span><span class="p">{</span><span class="mi">21</span><span class="p">}</span><span class="o">&amp;</span> <span class="o">=</span><span class="n">b_</span><span class="p">{</span><span class="mi">21</span><span class="p">}</span><span class="o">&amp;</span>
+    <span class="n">a_</span><span class="p">{</span><span class="mi">22</span><span class="p">}</span><span class="o">&amp;</span> <span class="o">=</span><span class="n">b_</span><span class="p">{</span><span class="mi">22</span><span class="p">}</span><span class="o">+</span><span class="n">c_</span><span class="p">{</span><span class="mi">22</span><span class="p">}</span>
+    \<span class="n">end</span><span class="p">{</span><span class="n">align</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>this will be rendered as:</p>
+<div class="math notranslate nohighlight" id="equation-eqn-a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eqn-a" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-b">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eqn-b" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+a_{11}&amp; =b_{11}&amp;
+  a_{12}&amp; =b_{12}\\
+a_{21}&amp; =b_{21}&amp;
+  a_{22}&amp; =b_{22}+c_{22}
+\end{align}\end{split}\]</div>
+</section>
+<section id="adding-tables">
+<h2>Adding tables<a class="headerlink" href="#adding-tables" title="Permalink to this headline">¶</a></h2>
+<p>Tables are rendered using standard ReST table styles, so this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+--------------------+-------------------------+</span>
+<span class="o">|</span> <span class="n">Column</span> <span class="mi">1</span>           <span class="o">|</span> <span class="n">Column</span> <span class="mi">2</span>                <span class="o">|</span>
+<span class="o">+====================+=========================+</span>
+<span class="o">|</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">some</span> <span class="n">data</span><span class="o">.</span> <span class="o">|</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">some</span> <span class="n">more</span> <span class="n">data</span><span class="o">.</span> <span class="o">|</span>
+<span class="o">+--------------------+-------------------------+</span>
+</pre></div>
+</div>
+<p>becomes the following rendered output in the Sphinx documentation:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column 1</p></th>
+<th class="head"><p>Column 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>This is some data.</p></td>
+<td><p>This is some more data.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note only left-aligned columns are supported by ReST, without injecting raw HTML.</p>
+</section>
+<section id="including-images">
+<h2>Including images<a class="headerlink" href="#including-images" title="Permalink to this headline">¶</a></h2>
+<p>We have a GOV.UK logo image at <code class="docutils literal notranslate"><span class="pre">../_static/images/govuk-logo.png</span></code> that we will use in
+the following example. To include the image in ReST, add the following text:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">../</span><span class="n">_static</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">govuk</span><span class="o">-</span><span class="n">logo</span><span class="o">.</span><span class="n">png</span>
+    <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">GOV</span><span class="o">.</span><span class="n">UK</span> <span class="n">logo</span>
+    <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">200</span><span class="n">px</span>
+</pre></div>
+</div>
+<p>to include the image with the alt text <code class="docutils literal notranslate"><span class="pre">GOV.UK</span> <span class="pre">logo</span></code> at a set width of 200 pixels,
+like so:</p>
+<a class="reference internal image-reference" href="../_images/govuk-logo.png"><img alt="GOV.UK logo" src="../_images/govuk-logo.png" style="width: 200px;" /></a>
+</section>
+<section id="gov-uk-design-system-components">
+<h2>GOV.UK Design System components<a class="headerlink" href="#gov-uk-design-system-components" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://design-system.service.gov.uk/components/">Some of the GOV.UK Design System components are incorporated into this
+theme</a> .</p>
+<section id="notification-banner">
+<h3>Notification banner<a class="headerlink" href="#notification-banner" title="Permalink to this headline">¶</a></h3>
+<p>To add a notification banner, add the following code to your ReST file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">note</span><span class="p">::</span> <span class="n">Notification</span> <span class="n">banner</span> <span class="n">title</span>
+
+    <span class="n">A</span> <span class="n">notification</span> <span class="n">to</span> <span class="n">flag</span> <span class="n">some</span> <span class="n">useful</span> <span class="n">information</span> <span class="n">to</span> <span class="n">the</span> <span class="n">user</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>which produces:</p>
+<div class="govuk-notification-banner docutils container">
+<div class="govuk-notification-banner__header"><h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Notification banner title</h2></div><div class="govuk-notification-banner__content docutils container">
+<p><p>A notification to flag some useful information to the user.</p>
+</p>
+</div>
+</div>
+</section>
+<section id="warning">
+<h3>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h3>
+<p>To add a warning, add the following code to your ReST file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">warning</span><span class="p">::</span>
+
+    <span class="n">A</span> <span class="n">warning</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>which produces:</p>
+<div class="govuk-warning-text docutils container">
+<span class="govuk-warning-text__icon">!</span><strong class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>A warning.</strong></div>
+</section>
+</section>
+</section>
+
+
+
+          </main>
+
+          <aside>
+  <ul class="contribution-banner">
+    
+    <li><a href="https://www.github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/blob/fb9cdab6e57288dfdb3f560c2fbdd96b4b863bdd/docs/example_components/restructuredtext.rst">View source</a></li>
+    <li><a href="https://www.github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme/issues/new?labels=bug&amp;title=Re:%20'example_components/restructuredtext.rst'&amp;body=Problem%20with%20'example_components/restructuredtext.rst'%20(docs/)">Report problem</a></li>
+    <li><a href="https://www.github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme">GitHub Repo</a></li>
+    
+  </ul>
+</aside>
+          <footer class="govuk-footer app-footer" role="contentinfo">
+<div class="govuk-footer__meta">
+  <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+    <ul class="govuk-footer__inline-list">
+      <li class="govuk-footer__inline-list-item">
+        <a class="govuk-footer__link" href="../accessibility.html">Accessibility</a>
+      </li>
+      <li class="govuk-footer__inline-list-item">
+        Built with <a class="govuk-footer__link" href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2 using the <a class="govuk-footer__link" href="https://www.github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme">GOV.UK Tech Docs Sphinx Theme</a>.
+      </li>
+    </ul>
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      class="govuk-footer__licence-logo"
+      xmlns="http://www.w3.org/2000/svg"
+      viewbox="0 0 483.2 195.7"
+      height="17"
+      width="41"
+      >
+      <path
+        fill="currentColor"
+        d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+    </svg>
+    <span class="govuk-footer__licence-description">
+    All content is available under the
+    <a
+      class="govuk-footer__link"
+      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+      rel="license"
+      >Open Government Licence v3.0</a>, except where otherwise stated
+    </span>
+  </div>
+  <div class="govuk-footer__meta-item">
+    <a
+      class="govuk-footer__link govuk-footer__copyright-logo"
+      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+  </div>
+</div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

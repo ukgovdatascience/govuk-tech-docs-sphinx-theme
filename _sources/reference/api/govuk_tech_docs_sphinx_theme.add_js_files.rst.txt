@@ -1,0 +1,6 @@
+﻿``govuk_tech_docs_sphinx_theme.add_js_files``
+=============================================
+
+.. currentmodule:: govuk_tech_docs_sphinx_theme
+
+.. autofunction:: add_js_files

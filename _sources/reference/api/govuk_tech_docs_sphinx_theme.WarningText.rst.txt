@@ -1,0 +1,41 @@
+﻿``govuk_tech_docs_sphinx_theme.WarningText``
+============================================
+
+.. currentmodule:: govuk_tech_docs_sphinx_theme
+
+.. autoclass:: WarningText
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~WarningText.__init__
+      ~WarningText.add_name
+      ~WarningText.assert_has_content
+      ~WarningText.debug
+      ~WarningText.directive_error
+      ~WarningText.error
+      ~WarningText.info
+      ~WarningText.run
+      ~WarningText.severe
+      ~WarningText.warning
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WarningText.final_argument_whitespace
+      ~WarningText.has_content
+      ~WarningText.option_spec
+      ~WarningText.optional_arguments
+      ~WarningText.required_arguments
+   
+   

@@ -1,0 +1,41 @@
+﻿``govuk_tech_docs_sphinx_theme.NotificationBanner``
+===================================================
+
+.. currentmodule:: govuk_tech_docs_sphinx_theme
+
+.. autoclass:: NotificationBanner
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~NotificationBanner.__init__
+      ~NotificationBanner.add_name
+      ~NotificationBanner.assert_has_content
+      ~NotificationBanner.debug
+      ~NotificationBanner.directive_error
+      ~NotificationBanner.error
+      ~NotificationBanner.info
+      ~NotificationBanner.run
+      ~NotificationBanner.severe
+      ~NotificationBanner.warning
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NotificationBanner.final_argument_whitespace
+      ~NotificationBanner.has_content
+      ~NotificationBanner.option_spec
+      ~NotificationBanner.optional_arguments
+      ~NotificationBanner.required_arguments
+   
+   
