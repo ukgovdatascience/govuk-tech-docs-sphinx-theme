@@ -1,0 +1,27 @@
+{%- extends "layout.html" %}
+{% set title = _('Search') %}
+
+{%- block scripts %}
+{{ super() }}
+<script src="{{ pathto('_static/javascripts/searchtools.js', 1) }}"></script>
+<script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+{%- endblock %}
+
+{% block extrahead %}
+<script src="{{ pathto('searchindex.js', 1) }}" defer></script>
+{% endblock %}
+
+{% block body %}
+<h1 id="search-documentation">{{ _('Search') }}</h1>
+<div id="search-results">
+  {% if search_results %}
+  <ul>
+  {% for href, caption, context in search_results %}
+    <li><a href="{{ pathto(item.href) }}">{{ caption }}</a>
+      <div class="context">{{ context|e }}</div>
+    </li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endblock %}

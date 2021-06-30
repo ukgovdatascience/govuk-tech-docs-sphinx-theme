@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    {%- block htmltitle %}
+    <title>{{ title|striptags|e }}{{ titlesuffix }} - {{ theme_organisation }} {{ project }}</title>
+    {%- endblock %}
+
+    {%- block scripts %}
+    <script id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+    {%- for js in script_files %}
+    {{ js_tag(js) }}
+    {%- endfor %}
+    {%- endblock %}
+
+    {%- block css %}
+    <link href="{{ pathto('_static/stylesheets/manifest.css', 1) }}" rel="stylesheet" />
+    <link href="{{ pathto('_static/stylesheets/theme.css', 1) }}" rel="stylesheet" />
+    {%- endblock %}
+
+    {%- if pageurl %}
+    <link rel="canonical" href="{{ pageurl|e }}" />
+    {%- endif %}
+    {%- if favicon %}
+    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+    {% else %}
+    <link rel="shortcut icon" href="{{ pathto('_static/', 1) }}/favicon.ico"/>
+    {%- endif %}
+    {%- if pageurl %}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="{{ pathto('_static/assets/govuk/assets/images/govuk-opengraph-image.png', 1) }}" />
+    <meta name="twitter:title" content="{{ title|striptags|e }}{{ titlesuffix }} - {{ theme_organisation }} {{ project }}" />
+    <meta name="twitter:url" content="{{ pageurl|e }}" />
+    <meta property="og:image" content="{{ pathto('_static/assets/govuk/assets/images/govuk-opengraph-image.png', 1) }}" />
+    <meta property="og:site_name" content="{{ theme_organisation }} {{ project }}" />
+    <meta property="og:title" content="{{ title|striptags|e }}{{ titlesuffix }}" />
+    <meta property="og:type" content="object" />
+    <meta property="og:url" content="{{ pageurl|e }}" />
+    {%- endif %}
+    {%- block extrahead %} {%- endblock %}
+  </head>
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+          <div class="govuk-header__container govuk-header__container--full-width">
+
+            {% include "header_logo.html" %}
+            {% include "header_navigation.html" %}
+
+          </div>
+        </header>
+      </div>
+      <div id="toc-heading" class="toc-show fixedsticky">
+        <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+        Table of contents <span class="toc-show__icon"></span>
+        </a>
+      </div>
+      <div class="app-pane__body" data-module="in-page-navigation">
+
+        {% include "sidebar.html" %}
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings" role="main">
+
+            {% block body %} {% endblock %}
+
+          </main>
+
+          {% include "contribution_banner.html" %}
+          {% include "footer.html" %}
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

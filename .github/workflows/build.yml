@@ -1,0 +1,77 @@
+name: govuk-tech-docs-sphinx-theme build
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+        python: [ 3.6, 3.7, 3.8, 3.9 ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.1.6
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      - name: Load cached virtual environment
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Install Poetry dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install --no-interaction --no-root
+      - name: Install library and dependencies
+        run: |
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
+            poetry run make dependencies
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            poetry install --no-interaction
+            poetry run pre-commit install
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Run pre-commit hooks
+        run: poetry run pre-commit run --all-files
+      - name: Create documentation
+        run: |
+          source $VENV
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
+            poetry run make docs
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            poetry run sphinx-build -b html ./docs ./docs/_build
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Execute tests, and create coverage report
+        run: |
+          source $VENV
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
+            poetry run make coverage_xml
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            poetry run coverage run -m pytest
+            poetry run coverage xml
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Upload coverage report to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          files: ./coverage.xml
+          env_vars: OS=${{ matrix.os }},PYTHON=${{ matrix.python }}

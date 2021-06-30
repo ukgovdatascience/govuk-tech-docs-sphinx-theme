@@ -1,0 +1,19 @@
+<div class="app-pane__toc" role="navigation">
+  <div class="toc" data-module="table-of-contents">
+    <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+
+    {% include "searchbox.html" %}
+
+    <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+
+      {# Global table of contents #}
+      {{ toctree(includehidden=True) }}
+      <hr size="1">
+
+      {# Local table of contents #}
+      <h1>On this page</h1>
+      {{ toc }}
+
+    </nav>
+  </div>
+</div>

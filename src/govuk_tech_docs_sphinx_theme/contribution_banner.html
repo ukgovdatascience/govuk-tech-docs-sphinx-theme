@@ -1,0 +1,19 @@
+{%- if page_source_suffix -%}
+{%- set suffix = page_source_suffix  -%}
+{%- else -%}
+{%- set suffix = source_suffix -%}
+{%- endif -%}
+
+<aside>
+  <ul class="contribution-banner">
+    {% if github_url %}
+    <li><a href="{{ github_url }}/blob/{{ version }}/{{ conf_py_path }}{{ pagename }}{{ suffix }}">View source</a></li>
+    <li><a href="{{ github_url }}/issues/new?labels=bug&amp;title=Re:%20'{{ pagename }}{{ suffix }}'&amp;body=Problem%20with%20'{{ pagename }}{{ suffix }}'%20({{ conf_py_path }})">Report problem</a></li>
+    <li><a href="{{ github_url }}">GitHub Repo</a></li>
+    {% elif gitlab_url %}
+    <li><a href="{{ gitlab_url }}/-/blob/{{ version }}/{{ conf_py_path }}{{ pagename }}{{ suffix }}">View source</a></li>
+    <li><a href="{{ gitlab_url }}/-/issues/new?issue[title]=Re:%20'{{ pagename }}{{ suffix }}'&amp;issue[description]=Problem%20with%20'{{ pagename }}{{ suffix }}'%20({{ conf_py_path }})">Report problem</a></li>
+    <li><a href="{{ gitlab_url }}">GitLab Repo</a></li>
+    {% endif %}
+  </ul>
+</aside>

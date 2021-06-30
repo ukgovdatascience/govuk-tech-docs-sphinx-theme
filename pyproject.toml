@@ -1,0 +1,63 @@
+# `poetry` configurations
+[tool.poetry]
+name = "govuk-tech-docs-sphinx-theme"
+version = "1.0.0"
+description = "A Sphinx theme to replicate the GOV.UK Tech Docs Template."
+authors = ["ukgovdatascience <gds-data-science@digital.cabinet-office.gov.uk>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme"
+repository = "https://github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme"
+documentation = "https://ukgovdatascience.github.io/govuk-tech-docs-sphinx-theme"
+keywords = ["sphinx", "theme"]
+classifiers = [
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Theme",
+    "Operating System :: OS Independent",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+Sphinx = "^4.0.2"
+
+[tool.poetry.dev-dependencies]
+coverage = "^5.4"
+detect-secrets = "1.0.3"
+myst-parser = "^0.15"
+pre-commit = "^2.10"
+pytest = "^6.2"
+pytest-mock = "^3.5"
+toml = "^0.10"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# `coverage` configurations
+[tool.coverage.run]
+source = [
+    "./src/govuk_tech_docs_sphinx_theme"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "if __name__ == .__main__.:"
+]
+
+# `isort` configurations
+[tool.isort]
+profile = "black"
+
+# `pytest` configurations
+[tool.pyproject.toml_options]
+addopts = [
+    "-vv",
+    "--doctest-modules"
+]
+doctest_optionflags = "NORMALIZE_WHITESPACE"
+testpaths = [
+    "./tests"
+]
