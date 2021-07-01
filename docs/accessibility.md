@@ -42,7 +42,7 @@ large print, easy read, audio recording or braille:
 
 We're always looking to improve the accessibility of this website. If you find any
 problems not listed on this page or think we're not meeting accessibility requirements,
-[contact us by email][email], or [raise an issue on our Github
+[contact us by email][email], or [raise an issue on our GitHub
 repository][github-issues].
 
 ## Enforcement procedure
@@ -93,7 +93,7 @@ control of the Government Digital Service (GDS).
 
 ## How we tested this website
 
-The test was carried out by the data sicence team at GDS. We used the [WAVE Web
+The test was carried out by the data science team at GDS. We used the [WAVE Web
 Accessibility Evaluation Tool][wave] and a checklist created by the GDS technical
 writing team with help from the GDS accessibility team. We tested all pages on this
 site.
@@ -104,7 +104,7 @@ We plan to fix the accessibility issues in the content by the end of December 20
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 12 June 2021. It was last reviewed on 15 June 2021.
+This statement was prepared on 12 June 2021. It was last reviewed on 1 July 2021.
 
 [abilitynet]: https://mcmw.abilitynet.org.uk/
 [accessibility-legislation]: https://www.legislation.gov.uk/uksi/2018/952/regulation/4/made
